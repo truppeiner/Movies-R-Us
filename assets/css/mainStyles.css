@@ -1,0 +1,74 @@
+
+body {
+    background-color:  hsl(48, 100%, 96%);
+    margin: 0;
+}
+
+/*Header START*/
+/*Navigation bar START*/
+  .navbar {
+      display: flex;
+      justify-content: center;
+  }
+  #my-navbar img {
+    display: block;
+  }
+  
+  #my-navbar a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  #my-navbar {
+    padding: 10px;
+  }
+  
+  #my-navbar .container,
+  #my-navbar .container>div {
+    display: flex;
+  }
+  
+  #my-navbar .container {
+    /* Set a max width to squeeze the navbar */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #my-navbar .container>div {
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #my-navbar .container {
+      margin: 0;
+    }
+    #my-navbar .container,
+    #my-navbar .container>div {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    #my-navbar .item {
+      margin: 5px;
+    }
+    #my-navbar .container>div:nth-child(1) {
+      order: 2;
+    }
+    #my-navbar .container>div:nth-child(2) {
+      order: 1;
+    }
+    #my-navbar .container>div:nth-child(3) {
+      order: 3;
+    }
+  }
+
+/*Navigation bar END*/
+/*Header END*/
+
+
+
+/* HERO SECTION STYLING */
+
+/* END HERO SECTION STYLING */

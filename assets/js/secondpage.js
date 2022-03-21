@@ -26,11 +26,19 @@ var searchSelectedGenre = function(genre) {
       return;
     }
     //genreSearchTerm.textContent = genre;
+<<<<<<< HEAD
   
   
     // loop over titles
     for (var i = 0; i < titles.length; i++) {
     
+=======
+
+
+    // loop over titles
+    for (var i = 0; i < titles.length; i++) {
+
+>>>>>>> 821787bc060ee74f78603607d3a5f39863c59a1b
       var titleName = titles[i].title; 
       var titleId = titles[i].id;
       var watchModeTitleIdUrl ='https://api.watchmode.com/v1/title/'+ titleId + '/details?append_to_response=sources&apiKey=ZAhWH7fs7akLihCUWHsN61BnLhW8cRtGdRZea30D';
@@ -45,8 +53,16 @@ var searchSelectedGenre = function(genre) {
         })
       })
     }
+<<<<<<< HEAD
    
   };
   
 
   searchSelectedGenre()
+=======
+
+  };
+
+
+  searchSelectedGenre() 
+>>>>>>> 821787bc060ee74f78603607d3a5f39863c59a1b
