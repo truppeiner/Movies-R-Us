@@ -3,6 +3,9 @@ body {
     background-color:  hsl(48, 100%, 96%);
     margin: 0;
 }
+
+/*Header START*/
+/*Navigation bar START*/
   .navbar {
       display: flex;
       justify-content: center;
@@ -60,8 +63,6 @@ body {
       order: 3;
     }
   }
-/*Header START*/
-/*Navigation bar START*/
 
 /*Navigation bar END*/
 /*Header END*/
