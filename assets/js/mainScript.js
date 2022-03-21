@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 821787bc060ee74f78603607d3a5f39863c59a1b
 var actionButtonEl = document.querySelector('#genre-buttons');
 var genreSearchTerm = document.querySelector('#genre-search-term');
 var genreResultsContainerEl = document.querySelector('#genre-results-container');
@@ -17,6 +20,7 @@ var buttonClickHandler = function(event) {
 
 
 actionButtonEl.addEventListener("click", buttonClickHandler);
+<<<<<<< HEAD
 
 
 
@@ -41,3 +45,5 @@ actionButtonEl.addEventListener("click", buttonClickHandler);
 
 
 
+=======
+>>>>>>> 821787bc060ee74f78603607d3a5f39863c59a1b
