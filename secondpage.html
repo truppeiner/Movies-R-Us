@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- links -->
-    <link rel="stylesheet" href="assets\css\secondpage.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<!--  <link rel="stylesheet" href="./assets/css/secondpage.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> -->
     <!-- end links -->
     <title>Movies "R" Us</title>
 </head>
@@ -41,7 +41,7 @@
     <section class="hero is-small is-primary is-info p-3 has-background">
         <div class="hero-body">
             <div class="genre-title">
-                <p class="genre">Comedy</p>
+                <h2 class="genre" id="selected-genre"></h2>
             </div>
         </div>
     </section>
@@ -49,13 +49,13 @@
 
     <!-- Content Start -->
     <section class="main m-1 p-1">
-        <div class="columns">
-            <h3>Movies List</h3>
-            <div class="movies-list">
-                <div>
-                    <p class="movie-title" id="option-title"></p>
-                    <img id="movie-poster" src="" alt="">
-                </div>
+        <div class="movies-list" id="title-card-box">
+          <div class="card" id="title-card">
+            <h3 class="movie-title card-header" id="selection-title"></h3>
+              <img id="movie-poster"  alt="img">
+              <p class="plot-overview" id="plot-overview"></p>
+              <p class="year" id="release-year"></p>
+              <p class="sources" id="streaming-sources"></p>
             </div>
         </div>
     </section>
@@ -88,7 +88,7 @@
     <!-- END FOOTER -->
 
     <!-- BEGIN SCRIPTS -->
-    <script src="assets\js\secondpage.js"></script>
+    <script src="./assets/js/secondpage.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- END SCRIPTS -->
 </body>
