@@ -43,7 +43,7 @@ var searchSelectedGenre = function(genre) {
         document.getElementById("selected-genre").textContent=selectedGenre;
     }
     // format the watchmode api url for genre title list
-    var watchModeGenreUrl = 'https://api.watchmode.com/v1/list-titles?genres=' + genre + '&limit=1&apiKey=q0SSevcz9jaqYRJpsQGTKDAdDgkRkjZ5eolnP0Yx';
+    var watchModeGenreUrl = 'https://api.watchmode.com/v1/list-titles?genres=' + genre + '&limit=2&apiKey=q0SSevcz9jaqYRJpsQGTKDAdDgkRkjZ5eolnP0Yx';
     fetch(watchModeGenreUrl).then(function(response) {
       //request successful
       if (response.ok) {
@@ -72,7 +72,6 @@ var searchSelectedGenre = function(genre) {
     
     // loop over titles
     for (var i = 0; i < titles.length; i++) {
-    
       var titleName = titles[i].title; 
       var titleId = titles[i].id;
       var watchModeTitleIdUrl ='https://api.watchmode.com/v1/title/'+ titleId + '/details?append_to_response=sources&apiKey=q0SSevcz9jaqYRJpsQGTKDAdDgkRkjZ5eolnP0Yx';
@@ -81,7 +80,6 @@ var searchSelectedGenre = function(genre) {
         response.json().then(function(data){
         console.log(data);
         
-
         // save API data to variables
         var selectTitle = data.title;
         var selectTitleId = data.id;
@@ -104,7 +102,7 @@ var searchSelectedGenre = function(genre) {
 
      /*   for (let i = 0; i < titles.length; i++) {
             var dynaTitleCard = document.createElement("div"); 
-            dynaTitleCard.innerHTML +='<div id="title-card'+i+'"></div>'
+            dynaTitleCard.innerHTML +='<div id="title-card'+i+'"></div>'     // could div id = title id?
             var titleCardBox = document.querySelector("#title-card-box")
             document.getElementById("title-card-box")
             titleCardBox.appendChild(dynaTitleCard);
