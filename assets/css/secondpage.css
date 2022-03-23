@@ -10,4 +10,13 @@ body {
     background-size: cover;
 }
 
+.hero p {
+    text-align: center;
+    size: 100px;
+}
 /* END HERO SECTION STYLING */
+
+#card-poster {
+    border: 20px;
+    border-color: hsl(204, 86%, 53%);
+}
