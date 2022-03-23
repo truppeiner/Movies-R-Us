@@ -9,7 +9,7 @@ var buttonClickHandler = function (event) {
   // get the genre attribute from the clicked element
   var genre = event.target.getAttribute("genre");
   if (genre) {
-    window.location.href = "./common/secondpage.html?genre=" + genre;
+    window.location.href = "./secondpage.html?genre=" + genre;
   }
 };
 
