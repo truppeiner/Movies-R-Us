@@ -72,5 +72,3 @@ var displaySelectedTitle = function (genre) {
 };
 
 displaySelectedTitle();
-
-
