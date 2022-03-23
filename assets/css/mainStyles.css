@@ -2,8 +2,13 @@
 body {
     background-color:  hsl(48, 100%, 96%);
     margin: 0;
+    display: flexbox;
 }
+
+/*Header START*/
+/*Navigation bar START*/
   .navbar {
+    width: 100%;
       display: flex;
       justify-content: center;
   }
@@ -60,14 +65,16 @@ body {
       order: 3;
     }
   }
-/*Header START*/
-/*Navigation bar START*/
-
 /*Navigation bar END*/
 /*Header END*/
 
 
+/* Main style START */
 
-/* HERO SECTION STYLING */
+#main h1 {
+  padding: 20 50 20 50;
+  margin: 50 50;
 
-/* END HERO SECTION STYLING */
+}
+
+/* Main style END */
