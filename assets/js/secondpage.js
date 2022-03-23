@@ -1,9 +1,3 @@
-var searchSelectedGenre = function(genre) {
-    var url = new URL(window.location);
-    var genre = url.searchParams.get("genre");
-    console.log(genre);
-    // format the watchmode api url for genre title list
-    var watchModeGenreUrl = 'https://api.watchmode.com/v1/list-titles?genres=' + genre + '&limit=1&apiKey=ZAhWH7fs7akLihCUWHsN61BnLhW8cRtGdRZea30D';
 var resultsBox = document.querySelector("#results-box");
 var detailsButtonEl = document.querySelector('#title-card-box');
 
@@ -61,56 +55,11 @@ var searchSelectedGenre = function(genre) {
       } else {
         alert('error: ' + response.statusText);
       }
-    });
-  };
-
-  var displayGenreResults = function(titles, genre) {
-    //console.log(titles);
-    console.log(genre)
-    // check if api returned any titles
-    if (titles.length === 0) {
-      genreResultsContainerEl.textContent = 'no titles found';
-      return;
-    }
-    //genreSearchTerm.textContent = genre;
-  
-  
-    // loop over titles
-    for (var i = 0; i < titles.length; i++) {
-    
-
-    // loop over titles
-    for (var i = 0; i < titles.length; i++) {
-      var titleName = titles[i].title; 
-      var titleId = titles[i].id;
-      var watchModeTitleIdUrl ='https://api.watchmode.com/v1/title/'+ titleId + '/details?append_to_response=sources&apiKey=ZAhWH7fs7akLihCUWHsN61BnLhW8cRtGdRZea30D';
-      fetch(watchModeTitleIdUrl).then(function(response) {
-        response.json().then(function(data){
-          console.log(data);
-          console.log(titleName);
-          console.log(data.sources);
-          console.log(data.poster);   
-          console.log(data.plot_overview);
-          console.log(data.year);
-        })
-      })
-    }
-
-  };
-  
-
-  searchSelectedGenre()
-
-
-  };
-
-
-  searchSelectedGenre() 
-  
-  .catch(function(error) {
-    console.log(error);
-      });
-};
+    })
+    .catch(function(error) {
+        console.log(error);
+         });
+    };
 
   var displayGenreResults = function(titles) {
     //console.log(titles);
@@ -231,4 +180,3 @@ var searchSelectedGenre = function(genre) {
   searchSelectedGenre()
 
   detailsButtonEl.addEventListener("click", detailsButtonClickHandler);
-
