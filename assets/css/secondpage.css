@@ -9,38 +9,3 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
-
-.bottom-hero{
-    background-color: rgba(32, 156, 238, .5);
-    border-radius: 10px;
-}
-/* END HERO SECTION */
-
-/* MAIN SECTION */
-
-/* information section */
-.information-section {
-    justify-content: center;
-}
-
-.info-nest {
-    margin: 5px;
-    padding: 15px;
-    border-radius: 10px;
-}
-/* end information section */
-
-/* where watch section */
-.where-watch {
-    margin-top: 5px;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.watch-list{
-    text-decoration: none;
-    color: hsl(48, 100%, 67%);
-}
-/* end where watch section */
-
-/* END MAIN SECTION */
