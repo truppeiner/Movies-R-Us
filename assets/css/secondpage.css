@@ -18,10 +18,11 @@ body {
 
 /* Card Styling */
 #title-card {
-    background-color: hsl(204, 86%, 53%);
+    background-color: grey;
     border-style: double;
     border-color: black;
-    display: flex;
+    margin-top: 4px;
+    justify-content: space-between;
 }
 
 #title-card h3 {
