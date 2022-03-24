@@ -40,8 +40,7 @@ var displaySelectedTitle = function(genre) {
           var featureRunTimeMinutes = data.runtime_minutes;
           var featureGenre = (data.genre_names[0]);
           var featureGenre2 = (data.genre_names[1]);
-          var featureGenre3 = (data.genre_names[2]);
-          
+          var featureGenre3 = (data.genre_names[2]); 
           var featurePlotOverview = data.plot_overview;
           var featurePosterUrl = data.poster;
           var featureBackdropUrl = data.backdrop;
@@ -56,7 +55,12 @@ var displaySelectedTitle = function(genre) {
           document.getElementById("feature-rating").textContent=featureRating;
           document.getElementById("feature-runtime-minutes").textContent=featureRunTimeMinutes;
           document.getElementById("feature-genre").textContent=featureGenre +" - "+ featureGenre2+" - "+featureGenre3;
-          
+          if (featureGenre3 === undefined) {
+            document.getElementById("feature-genre").textContent=featureGenre +" - "+ featureGenre2+" - "+ "";
+          };
+          if (featureGenre2 === undefined) {
+            document.getElementById("feature-genre").textContent=featureGenre + "";
+          };
           document.getElementById("feature-plot-overview").textContent=featurePlotOverview;
           var featurePoster = document.getElementById("feature-poster");
           featurePoster.setAttribute("src", featurePosterUrl);
@@ -66,7 +70,7 @@ var displaySelectedTitle = function(genre) {
          // trailerThumbnail.setAttribute("href", featureTrailerUrl)
           document.getElementById("trailer-link").setAttribute("href", featureTrailerUrl);
           document.getElementById("trailer-link").setAttribute("target", "_blank");
-
+         // call movie database for cast list
           var castURL = "https://api.themoviedb.org/3/movie/" + featureImbdId + "/credits?api_key=921ba47b5c4b85bc48dd2db9202db1be&language=en-US"; 
           fetch(castURL).then(function (response) {
           if (response.ok) { 
