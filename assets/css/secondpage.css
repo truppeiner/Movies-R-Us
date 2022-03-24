@@ -10,4 +10,35 @@ body {
     background-size: cover;
 }
 
+.hero .hero-body .genre-title p {
+    text-align: center;
+    text-size-adjust: 100px;
+}
 /* END HERO SECTION STYLING */
+
+/* Card Styling */
+#title-card {
+    background-color: grey;
+    border-style: double;
+    border-color: black;
+    margin-top: 4px;
+    justify-content: space-between;
+}
+
+#title-card h3 {
+    color: hsl(48, 100%, 67%);
+}
+
+#title-card p {
+    color: hsl(48, 100%, 67%);
+}
+
+.btn {
+    background-color: hsl(204, 85%, 50%);
+    color: white;
+}
+
+.btn:hover{
+    background-color: green;
+    color: white;
+}
