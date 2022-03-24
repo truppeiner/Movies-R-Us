@@ -1,9 +1,20 @@
+window.onload = function () {
+  var picks = localStorage.getItem("selection");
+  var savePicksEl = document.querySelector(".save-button");
+  var parPicks = JSON.parse(picks);
+  //how to sort element
+  //this sort can only be done on Arrays
+  console.log(parPicks);
+  savePicksEl.innerHTML = parPicks;
+  // savePicksEl.appendChild(parPicks);
+  console.log(picks);
+};
 var actionButtonEl = document.querySelector("#genre-buttons");
 var genreSearchTerm = document.querySelector("#genre-search-term");
 var genreResultsContainerEl = document.querySelector(
   "#genre-results-container"
 );
-var savePicksEl = document.querySelector(".save-button");
+
 var titleBoxEl = document.querySelector("#title-box");
 
 var buttonClickHandler = function (event) {
@@ -22,12 +33,6 @@ var buttonClickHandler = function (event) {
     window.location.href = "./common/secondpage.html?genre=" + genre;
   }
   localStorage.setItem("selection", JSON.stringify(genre));
-  window.onload(
-    (savePicksEl.textContent = localStorage.getItem(
-      "selection",
-      JSON.parse(genre)
-    ))
-  );
 };
 
 actionButtonEl.addEventListener("click", buttonClickHandler);
