@@ -46,6 +46,10 @@ html, body {
 /*Navigation bar END*/
 /*Header END*/
 /* Main style START */
+main,h1 {
+  padding: 0px;
+}
+
 .btn {
   display: inline-block;
   height: 200px;
@@ -55,6 +59,7 @@ html, body {
   width: 200px;
   justify-content: space-between;
 }
+
 
 /* Main style END */
 @media screen and (max-width: 768px) {
