@@ -3,6 +3,7 @@ var genreSearchTerm = document.querySelector("#genre-search-term");
 var genreResultsContainerEl = document.querySelector(
   "#genre-results-container"
 );
+var savePicksEl = document.querySelector(".save-button");
 var titleBoxEl = document.querySelector("#title-box");
 
 var buttonClickHandler = function (event) {
@@ -20,6 +21,13 @@ var buttonClickHandler = function (event) {
   if (genre) {
     window.location.href = "./common/secondpage.html?genre=" + genre;
   }
+  localStorage.setItem("selection", JSON.stringify(genre));
+  window.onload(
+    (savePicksEl.textContent = localStorage.getItem(
+      "selection",
+      JSON.parse(genre)
+    ))
+  );
 };
 
 actionButtonEl.addEventListener("click", buttonClickHandler);

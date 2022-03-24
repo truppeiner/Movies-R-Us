@@ -7,7 +7,7 @@ var displaySelectedTitle = function (genre) {
   var selectedTitleApiUrl =
     "https://api.watchmode.com/v1/title/" +
     selectedTitleId +
-    "/details/?append_to_response=sources&apiKey=q0SSevcz9jaqYRJpsQGTKDAdDgkRkjZ5eolnP0Yx";
+    "/details/?append_to_response=sources&apiKey=WIu3mU2xnsXe9BTf7WlTqfAmFnw3uwR5kTG1RtbB";
   fetch(selectedTitleApiUrl)
     .then(function (response) {
       //request successful
@@ -61,6 +61,7 @@ var displaySelectedTitle = function (genre) {
           document.getElementById("feature-hero").style.backgroundImage =
             "url(" + featureBackdropUrl;
           // pick up here*************
+
           var castURL =
             "https://api.themoviedb.org/3/movie/" +
             featureImbdId +
@@ -75,7 +76,6 @@ var displaySelectedTitle = function (genre) {
                   " and " +
                   Object.values(data.cast[1])[4];
                 // var cast1 = Object.values(data.cast[1])[4];
-
                 // console.log(cast1);
                 console.log(cast);
                 console.log(director);
