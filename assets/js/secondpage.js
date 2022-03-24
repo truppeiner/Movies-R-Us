@@ -29,6 +29,9 @@ var searchSelectedGenre = function(genre) {
     } else if (genre === "32") {
         let selectedGenre = "Musical";
         document.getElementById("selected-genre").textContent=selectedGenre;
+      } else if (genre === "13") {
+        let selectedGenre = "Mystery";
+        document.getElementById("selected-genre").textContent=selectedGenre;
     } else if (genre === "14") {
         let selectedGenre = "Romance";
         document.getElementById("selected-genre").textContent=selectedGenre;       
