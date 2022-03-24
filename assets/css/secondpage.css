@@ -29,7 +29,7 @@ body {
     color: hsl(48, 100%, 67%);
 }
 
-#title-card span {
+#title-card p {
     color: hsl(48, 100%, 67%);
 }
 
@@ -42,3 +42,4 @@ body {
     background-color: green;
     color: white;
 }
+
