@@ -5,7 +5,7 @@ var displaySelectedTitle = function(genre) {
     console.log(selectedTitleId);
 
     // format the watchmode api url for selected title details
-    var selectedTitleApiUrl = 'https://api.watchmode.com/v1/title/' + selectedTitleId + '/details/?append_to_response=sources&apiKey=q0SSevcz9jaqYRJpsQGTKDAdDgkRkjZ5eolnP0Yx';
+    var selectedTitleApiUrl = 'https://api.watchmode.com/v1/title/' + selectedTitleId + '/details/?append_to_response=sources&apiKey=WIu3mU2xnsXe9BTf7WlTqfAmFnw3uwR5kTG1RtbB';
     fetch(selectedTitleApiUrl).then(function(response) {
       //request successful
       if (response.ok) {
