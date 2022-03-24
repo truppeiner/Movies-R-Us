@@ -7,7 +7,7 @@ var displaySelectedTitle = function (genre) {
   var selectedTitleApiUrl =
     "https://api.watchmode.com/v1/title/" +
     selectedTitleId +
-    "/details/?append_to_response=sources&apiKey=q0SSevcz9jaqYRJpsQGTKDAdDgkRkjZ5eolnP0Yx";
+    "/details/?append_to_response=sources&apiKey=WIu3mU2xnsXe9BTf7WlTqfAmFnw3uwR5kTG1RtbB";
   fetch(selectedTitleApiUrl)
     .then(function (response) {
       //request successful
@@ -36,11 +36,14 @@ var displaySelectedTitle = function (genre) {
           var featureRating = data.us_rating;
           var featureRunTimeMinutes = data.runtime_minutes;
           var featureGenre = data.genre_names[0];
+          var featureGenre2 = data.genre_names[1];
+          var featureGenre3 = data.genre_names[2];
+
           var featurePlotOverview = data.plot_overview;
           var featurePosterUrl = data.poster;
           var featureBackdropUrl = data.backdrop;
           var featureTrailerUrl = data.trailer;
-          var featureTrailerThumbnailUrl = data.trailer_thumbnail;
+          var featureTrailerThumbnail = data.trailer_thumbnail;
           // append feature title data to final page display
           document.getElementById("feature-title").textContent = featureTitle;
           document.getElementById("main-feature-title").textContent =
@@ -53,14 +56,25 @@ var displaySelectedTitle = function (genre) {
           document.getElementById("feature-rating").textContent = featureRating;
           document.getElementById("feature-runtime-minutes").textContent =
             featureRunTimeMinutes;
-          document.getElementById("feature-genre").textContent = featureGenre;
+          document.getElementById("feature-genre").textContent =
+            featureGenre + " - " + featureGenre2 + " - " + featureGenre3;
+
           document.getElementById("feature-plot-overview").textContent =
             featurePlotOverview;
           var featurePoster = document.getElementById("feature-poster");
           featurePoster.setAttribute("src", featurePosterUrl);
           document.getElementById("feature-hero").style.backgroundImage =
             "url(" + featureBackdropUrl;
-          // pick up here*************
+          var trailerThumbnail = document.getElementById("trailer-thumbnail");
+          trailerThumbnail.setAttribute("src", featureTrailerThumbnail);
+          // trailerThumbnail.setAttribute("href", featureTrailerUrl)
+          document
+            .getElementById("trailer-link")
+            .setAttribute("href", featureTrailerUrl);
+          document
+            .getElementById("trailer-link")
+            .setAttribute("target", "_blank");
+
           var castURL =
             "https://api.themoviedb.org/3/movie/" +
             featureImbdId +
@@ -69,18 +83,20 @@ var displaySelectedTitle = function (genre) {
             if (response.ok) {
               response.json().then(function (data) {
                 console.log(data);
-                var director = Object.values(data.crew[1])[4];
+                // var director = Object.values(data.crew[1])[4];
                 var cast =
                   Object.values(data.cast[0])[4] +
-                  " and " +
+                  " ,  " +
+                  Object.values(data.cast[1])[4] +
+                  " , " +
                   Object.values(data.cast[1])[4];
-                // var cast1 = Object.values(data.cast[1])[4];
 
+                // var cast1 = Object.values(data.cast[1])[4];
                 // console.log(cast1);
                 console.log(cast);
-                console.log(director);
-                document.getElementById("feature-director").textContent =
-                  director;
+                // console.log(director);
+                // document.getElementById("feature-director").textContent =
+                // director;
                 document.getElementById("feature-actors").textContent = cast;
                 // document.getElementById("feature-actors").textContent = cast1;
               });
