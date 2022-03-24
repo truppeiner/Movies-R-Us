@@ -24,6 +24,14 @@ var displaySelectedTitle = function(genre) {
           console.log(data.sources);
           console.log(data.trailer_thumbnail);
           // store desired data in variables
+          if (data.type ==="tv_series") {
+            let featureType = "TV Series"
+            document.getElementById("feature-type").textContent=featureType;
+          } else if (data.type ==="movie") {
+            let featureType = "Movie"
+            document.getElementById("feature-type").textContent=featureType;
+          }
+
           var featureTitle = data.title;
           var featureId = data.id;
           var featureImbdId = data.imdb_id;
