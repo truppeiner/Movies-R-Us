@@ -1,4 +1,3 @@
-
 var displaySelectedTitle = function(genre) {
   var url = new URL(window.location);
   var selectedTitleId = url.searchParams.get("featureTitleId") 
@@ -24,15 +23,7 @@ var displaySelectedTitle = function(genre) {
           console.log(data.sources);
           console.log(data.trailer_thumbnail);
           // store desired data in variables
-          if (data.type ==="tv_series") {
-            let featureType = "TV Series"
-            document.getElementById("feature-type").textContent=featureType;
-          } else if (data.type ==="movie") {
-            let featureType = "Movie"
-            document.getElementById("feature-type").textContent=featureType;
-          }
           var featureTitle = data.title;
-          //var featureType = data.type;
           var featureId = data.id;
           var featureImbdId = data.imdb_id;
           var featureYear = data.year;
@@ -58,7 +49,6 @@ var displaySelectedTitle = function(genre) {
           document.getElementById("feature-rating").textContent=featureRating;
           document.getElementById("feature-runtime-minutes").textContent=featureRunTimeMinutes;
           document.getElementById("feature-genre").textContent=featureGenre +" - "+ featureGenre2+" - "+featureGenre3;
-          
           
           document.getElementById("feature-plot-overview").textContent=featurePlotOverview;
           var featurePoster = document.getElementById("feature-poster");
