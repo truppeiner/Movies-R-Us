@@ -9,19 +9,27 @@ body {
     background-size: cover;
 }
 
+.bottom-hero{
+    background-color: rgba(32, 156, 238, .5);
+    border-radius: 10px;
+}
 /* END HERO SECTION STYLING */
 
-.information-section {
+.info-nest {
     justify-content: center;
 }
 
-.where-watch, .information-section {
+.where-watch, .info-nest {
     margin-top: 30px;
-    padding: 10px;
+    padding: 10px; 
     border-radius: 10px;
 }
 
 .watch-list{
     text-decoration: none;
     color: hsl(48, 100%, 67%);
+}
+
+footer {
+    background-color: hsl(48, 100%, 96%) !important;
 }
