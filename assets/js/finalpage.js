@@ -32,7 +32,10 @@ var displaySelectedTitle = function(genre) {
           var featureCriticScore = data.critic_score;
           var featureRating = data.us_rating;
           var featureRunTimeMinutes = data.runtime_minutes;
-          var featureGenre = data.genre_names[0];
+          var featureGenre = (data.genre_names[0]);
+          var featureGenre2 = (data.genre_names[1]);
+          var featureGenre3 = (data.genre_names[2]);
+          
           var featurePlotOverview = data.plot_overview;
           var featurePosterUrl = data.poster;
           var featureBackdropUrl = data.backdrop;
@@ -46,7 +49,8 @@ var displaySelectedTitle = function(genre) {
           document.getElementById("feature-critic-score").textContent=featureCriticScore;
           document.getElementById("feature-rating").textContent=featureRating;
           document.getElementById("feature-runtime-minutes").textContent=featureRunTimeMinutes;
-          document.getElementById("feature-genre").textContent=featureGenre;
+          document.getElementById("feature-genre").textContent=featureGenre +" - "+ featureGenre2+" - "+featureGenre3;
+          
           document.getElementById("feature-plot-overview").textContent=featurePlotOverview;
           var featurePoster = document.getElementById("feature-poster");
           featurePoster.setAttribute("src", featurePosterUrl);
