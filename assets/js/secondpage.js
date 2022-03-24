@@ -98,6 +98,7 @@ var searchSelectedGenre = function(genre) {
         document.getElementById("details-button"+i).textContent="Title Details";
         document.getElementById("details-button"+i).setAttribute("title-id", titles.titles[i].id); 
       }
+      break;
     }
 }
 
