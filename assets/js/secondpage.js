@@ -88,7 +88,7 @@ var searchSelectedGenre = function(genre) {
       
       for (let i = 0; i < titles.titles.length; i++) {
         var dynaTitleCard = document.createElement("div"); 
-        dynaTitleCard.innerHTML +='<div id="title-card" class="card"><h3 class="card-header" "movie-title" id="selection-title'+i+'"></h3></p><p class="year" id="release-year'+i+'"></p><button id="details-button'+i+'" class="btn"></button></div>'                                          
+        dynaTitleCard.innerHTML +='<div id="title-card" class="card"><h3 class="card-header" "movie-title" id="selection-title'+i+'"></h3><span class="year" id="release-year'+i+'"></span><button id="details-button'+i+'" class="btn"></button></div>'                                          
         
         var titleCardBox = document.querySelector("#title-card-box")
         document.getElementById("title-card-box");
@@ -101,7 +101,6 @@ var searchSelectedGenre = function(genre) {
       break;
     }
 }
-
 
 var detailsButtonClickHandler = function(event) {
   // get the title id attribute from the clicked element
