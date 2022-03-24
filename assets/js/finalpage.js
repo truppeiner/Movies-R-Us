@@ -77,12 +77,12 @@ var displaySelectedTitle = function(genre) {
             response.json().then(function (data) { 
             console.log(data); 
             var director = Object.values(data.crew[1])[4]; 
-            var cast = Object.values(data.cast[0])[4] + " and " + Object.values(data.cast[1])[4]; 
+            var cast = Object.values(data.cast[0])[4] + ", " + Object.values(data.cast[1])[4] + ", " + Object.values(data.cast[2])[4] + ", " + Object.values(data.cast[3])[4] + ", " + Object.values(data.cast[4])[4] + ", and " + Object.values(data.cast[5])[4]; 
             // var cast1 = Object.values(data.cast[1])[4];
             // console.log(cast1);
             console.log(cast);
             console.log(director);
-            document.getElementById("feature-director").textContent = director;
+          //  document.getElementById("feature-director").textContent = director;
             document.getElementById("feature-actors").textContent = cast;
            // document.getElementById("feature-actors").textContent = cast1;
            });
