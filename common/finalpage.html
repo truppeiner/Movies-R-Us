@@ -1,69 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- links -->
-    <link rel="stylesheet" href="../assets/css/mainStyles.css"/>
-    <link rel="stylesheet" href="../assets/css/finalPageStyles.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="../assets/css/mainStyles.css" />
+    <link rel="stylesheet" href="../assets/css/finalPageStyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
     <!-- end links -->
     <title>Movies "R" Us</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- BEGIN HEADER -->
     <header>
-        <nav class="navbar is-fixed-top is-info">
-                <div class="navbar-start">
-                    <a href="#" class="navbar-item">
-                        <h1 class="title is-4 has-text-warning">Movies "R" Us</h1>
-                    </a>
-                </div>
-                <div class="navbar-item">
-                    <a href="#" class="image">
-                        <img src="../assets/Images/MRU-Logo.png" alt="Movies-R-Us logo">
-                    </a>
-                </div>
-                <div class="navbar-menu navbar-end is-active">
-                    <div class="navbar-end">
-                        <a href="../index.html" class="navbar-item nav-text has-text-warning">Home</a>
-                        <a href="https://www.imdb.com/chart/moviemeter/?ref_=nv_mv_mpm" target="_blank" class="navbar-item nav-text has-text-warning">Most Popular</a>
-                        <a href="https://www.imdb.com/chart/top/?ref_=nv_mv_250" target="_blank" class="navbar-item nav-text has-text-warning">IMDb Top-250</a>
-                    </div>
-                </div>
-        </nav>
+      <nav class="navbar is-fixed-top is-info">
+        <div class="navbar-start">
+          <a href="#" class="navbar-item">
+            <h1 class="title is-4 has-text-warning">Movies "R" Us</h1>
+          </a>
+        </div>
+        <div class="navbar-item">
+          <a href="#" class="image">
+            <img src="../assets/Images/MRU-Logo.png" alt="Movies-R-Us logo" />
+          </a>
+        </div>
+        <div class="navbar-menu navbar-end is-active">
+          <div class="navbar-end">
+            <a
+              href="../index.html"
+              class="navbar-item nav-text has-text-warning"
+              >Home</a
+            >
+            <a
+              href="https://www.imdb.com/chart/moviemeter/?ref_=nv_mv_mpm"
+              target="_blank"
+              class="navbar-item nav-text has-text-warning"
+              >Most Popular</a
+            >
+            <a
+              href="https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+              target="_blank"
+              class="navbar-item nav-text has-text-warning"
+              >IMDb Top-250</a
+            >
+          </div>
+        </div>
+      </nav>
     </header>
     <!-- END HEADER -->
 
     <!-- BEGIN HERO -->
-    <section class="hero is-medium is-primary is-info p-1 has-background" id="feature-hero">
-        <div class="hero-body">
-            <!-- title rating display -->
-            <div class="movie-title">
-                <!-- append title here -->
-                <p class="title title-display" id="main-feature-title"></p>
-                <!-- append year & rating here -->
-                <p class="subtitle"><span class="release-date" id="feature-year"></span><span class="ratingMA" id="feature-rating"></span></p>
-            </div>
+    <section
+      class="hero is-medium is-primary is-info p-1 has-background"
+      id="feature-hero"
+    >
+      <div class="hero-body">
+        <!-- title rating display -->
+        <div class="movie-title">
+          <!-- append title here -->
+          <p class="title title-display" id="main-feature-title"></p>
+          <!-- append year & rating here -->
+          <p class="subtitle">
+            <span class="release-date" id="feature-year"></span
+            ><span class="ratingMA" id="feature-rating"></span>
+          </p>
         </div>
-        <!-- end title rating display -->
-    <!-- begin ratings bar -->
-    <div class="hero-foot">
+      </div>
+      <!-- end title rating display -->
+      <!-- begin ratings bar -->
+      <div class="hero-foot">
         <nav class="tabs">
-            <div class="container">
-                <ul>
-                    <!-- append user score here -->
-                    <li class="bottom-hero"><a>User Rating:&nbsp;<span class="us-score" id="feature-user-rating"></span></a></li>
-                    <!-- append critic score here -->
-                    <li class="bottom-hero mx-2"><a>Critic Score:&nbsp;<span class="crit-score" id="feature-critic-score"></span></a></li>
-                    <!-- append runtime here -->
-                    <li class="bottom-hero"><a>Runtime:&nbsp;<span class="runtime" id="feature-runtime-minutes"></span><span>&nbsp;Minutes</span></a></li>
-                </ul>
-            </div>
+          <div class="container">
+            <ul>
+              <!-- append user score here -->
+              <li class="bottom-hero">
+                <a
+                  >User Rating:&nbsp;<span
+                    class="us-score"
+                    id="feature-user-rating"
+                  ></span
+                ></a>
+              </li>
+              <!-- append critic score here -->
+              <li class="bottom-hero mx-2">
+                <a
+                  >Critic Score:&nbsp;<span
+                    class="crit-score"
+                    id="feature-critic-score"
+                  ></span
+                ></a>
+              </li>
+              <!-- append runtime here -->
+              <li class="bottom-hero">
+                <a
+                  >Runtime:&nbsp;<span
+                    class="runtime"
+                    id="feature-runtime-minutes"
+                  ></span
+                  ><span>&nbsp;Minutes</span></a
+                >
+              </li>
+            </ul>
+          </div>
         </nav>
-    </div>
-    <!-- end ratings bar -->
+      </div>
+      <!-- end ratings bar -->
     </section>
     <!-- END HERO -->
 
@@ -86,27 +131,7 @@
                     <!-- append genre here -->
                     <p class="genre-display" id="feature-genre"></p>
                 </div>
-                    <div class="columns content">
-                        <div class="column">
-                            <div class="content has-background-info has-text-warning info-nest">
-                                <h3 class="has-text-warning"> Plot Synopsis</h3>
-                                <!-- append plot here -->
-                                <p class="plot-display" id="feature-plot-overview"></p>
-                            </div>
-                            <div class="columns">
-                                <div class="column has-background-info has-text-warning info-nest">
-                                    <h3 class="has-text-warning">Director</h3>
-                                    <!-- append director here-->
-                                    <p class="dir-display" id="feature-director"></p>
-                                </div>
-                                <div class="column has-background-info has-text-warning info-nest">
-                                    <h3 class="has-text-warning">Actors</h3>
-                                    <!-- append actors here -->
-                                    <p class="act-display" id="feature-actors"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              </div>
             </div>
             <!-- end information section -->
             <!-- where watch section -->
@@ -118,25 +143,30 @@
                         </div>
                 </div>
             </div>
-            <!-- end where watch section -->
+          </div>
         </div>
+        <!-- end where watch section -->
+      </div>
     </section>
     <!-- END MAIN SECTION -->
 
     <!-- BEGIN FOOTER -->
     <footer class="footer">
-        <nav class="navbar is-fixed-bottom is-info">
-            <div class="navbar-start">
-                <a href="#" class="navbar-item">
-                    <h1 class="title is-4 has-text-warning">Movies "R" Us</h1>
-                </a>
-            </div>
-            <div class="navbar-item">
-                <a class="git content title has-text-white" href="https://github.com/truppeiner/Movies-R-Us">
-                    GitHub
-                </a>
-            </div>
-        </nav>
+      <nav class="navbar is-fixed-bottom is-info">
+        <div class="navbar-start">
+          <a href="#" class="navbar-item">
+            <h1 class="title is-4 has-text-warning">Movies "R" Us</h1>
+          </a>
+        </div>
+        <div class="navbar-item">
+          <a
+            class="git content title has-text-white"
+            href="https://github.com/truppeiner/Movies-R-Us"
+          >
+            GitHub
+          </a>
+        </div>
+      </nav>
     </footer>
     <!-- END FOOTER -->
 
@@ -144,5 +174,5 @@
     <script src="../assets/js/finalpage.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- END SCRIPTS -->
-</body>
+  </body>
 </html>
