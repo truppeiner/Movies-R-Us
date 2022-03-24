@@ -43,18 +43,21 @@ var searchSelectedGenre = function(genre) {
         document.getElementById("selected-genre").textContent=selectedGenre;
     }
     // format the watchmode api url for genre title list
-    var watchModeGenreUrl = 'https://api.watchmode.com/v1/list-titles?genres=' + genre + '&limit=1&apiKey=q0SSevcz9jaqYRJpsQGTKDAdDgkRkjZ5eolnP0Yx';
+    var watchModeGenreUrl = 'https://api.watchmode.com/v1/list-titles?genres=' + genre + '&limit=10&apiKey=WIu3mU2xnsXe9BTf7WlTqfAmFnw3uwR5kTG1RtbB';
     fetch(watchModeGenreUrl).then(function(response) {
       //request successful
       if (response.ok) {
         response.json().then(function(data) {
             console.log(data);
-          displayGenreResults(data.titles, genre);
-         // console.log(data.titles);
+        displayGenreResults(data, data.titles);
+            console.log(data.titles);
+            console.log(data.titles[0].id);
+            console.log(data.titles[0].title);
+            console.log(data.titles[0].year);
         });
       } else {
         alert('error: ' + response.statusText);
-      }
+    }
     })
     .catch(function(error) {
         console.log(error);
@@ -62,121 +65,53 @@ var searchSelectedGenre = function(genre) {
     };
 
   var displayGenreResults = function(titles) {
-    //console.log(titles);
-    //console.log(genre)
+    console.log(titles);
+    console.log(titles.titles[0].id);
+    console.log(titles.titles[0].title);
+    console.log(titles.titles[0].year);
+
     // check if api returned any titles
-    if (titles.length === 0) {
+    if (titles.titles.length === 0) {
       console.log('no titles found');
       return;
     }
     
     // loop over titles
-    for (var i = 0; i < titles.length; i++) {
-      var titleName = titles[i].title; 
-      var titleId = titles[i].id;
-      var watchModeTitleIdUrl ='https://api.watchmode.com/v1/title/'+ titleId + '/details?append_to_response=sources&apiKey=q0SSevcz9jaqYRJpsQGTKDAdDgkRkjZ5eolnP0Yx';
-      fetch(watchModeTitleIdUrl).then(function(response) {
-        if (response.ok) {
-        response.json().then(function(data){
-        console.log(data);
+    for (var i = 0; i < titles.titles.length; i++) {
+      //console.log(titles.titles);
+      //console.log(titles.titles[0].id);
+   
+      var titleName = titles.titles[i].title; 
+      var titleId = titles.titles[i].id;
+      var titleYear = titles.titles[i].year;
+      //console.log(titleName);
+      
+      for (let i = 0; i < titles.titles.length; i++) {
+        var dynaTitleCard = document.createElement("div"); 
+        dynaTitleCard.innerHTML +='<div id="title-card'+i+'" class="card"><h3 class="card-header" "movie-title" id="selection-title'+i+'"></h3></p><p class="year" id="release-year'+i+'"></p><button id="details-button'+i+'" class="btn"></button></div>'                                          
         
-        // save API data to variables
-        var selectTitle = data.title;
-        var selectTitleId = data.id;
-        var posterUrl = data.poster;
-        var streamingSources = data.sources;
-        var plotOverview = (data.plot_overview);
-        var releaseYear = (data.year);
-        
-
-// append to div hard coded into index.html
-      //var posterBox = document.getElementById("movie-poster");
-         // posterBox.setAttribute("src", posterUrl);
-        // document.getElementById("selection-title").textContent=selectTitle;
-        // document.getElementById("plot-overview").textContent=plotOverview;
-        // document.getElementById("release-year").textContent=releaseYear;
-        //  document.getElementById("streaming-sources").textContent=streamingSources;
-
-
-//dynamically create title cards through for loop to give each card a unique id
-
-     /*   for (let i = 0; i < titles.length; i++) {
-            var dynaTitleCard = document.createElement("div"); 
-            dynaTitleCard.innerHTML +='<div id="title-card'+i+'"></div>'     // could div id = title id?
-            var titleCardBox = document.querySelector("#title-card-box")
-            document.getElementById("title-card-box")
-            titleCardBox.appendChild(dynaTitleCard);
-            var cardTitle = document.createElement("h3");
-            
-            cardTitle.className="card-header-title"
-            dynaTitleCard.appendChild(cardTitle);
-            document.getElementById("option-title").textContent=selectTitle
-        } */
-
-//dynamically create title individual title card and populate with info on 1 title 
-         var titleCardBox = document.querySelector("#title-card-box");
-         var dynaTitleCard = document.createElement("div");
-           dynaTitleCard.className="card";
-           dynaTitleCard.id="title-card";
-           titleCardBox.appendChild(dynaTitleCard);
-           
-         var cardTitle = document.createElement("h3");
-           cardTitle.id="option-title";
-           cardTitle.className="card-header-title"
-           dynaTitleCard.appendChild(cardTitle);
-           document.getElementById("option-title").textContent=selectTitle
-
-         var cardPoster = document.createElement("img");
-           cardPoster.id ="card-poster";
-           cardPoster.src=posterUrl;
-           dynaTitleCard.appendChild(cardPoster);
-
-         var cardPlotOverview = document.createElement("p");
-           cardPlotOverview.id ="card-plot-overview";
-           dynaTitleCard.appendChild(cardPlotOverview);
-           document.getElementById("card-plot-overview").textContent=plotOverview;
-
-         var cardReleaseYear = document.createElement("p");
-           cardReleaseYear.id ='card-release-year';
-           dynaTitleCard.appendChild(cardReleaseYear);
-           document.getElementById('card-release-year').textContent=releaseYear;
-
-         var detailsButton = document.createElement("button");
-           detailsButton.id = selectTitleId;
-           detailsButton.textContent="Title Details"
-           dynaTitleCard.appendChild(detailsButton);
-          
-          //var titleCard = document.querySelector("#title-card");
-          
-          //document.getElementById("").textContent=;
-         console.log(posterUrl);
-         console.log(selectTitle);
-         console.log(data.sources);
-         console.log(data.poster);   
-         console.log(data.plot_overview);
-         console.log(data.year);
-        })
-          
-        } else {
-            alert('error: ' + response.statusText);
-          }
-        })
-        .catch(function(error) {
-            console.log(error);
-             });
-        };
-  
-    };
-  var detailsButtonClickHandler = function(event) {
-    // get the title id attribute from the clicked element
-    var featureTitleId = event.target.getAttribute('id');
-    //console.log(id);
-    if (featureTitleId) {
-      window.location.href ="./finalpage.html?featureTitleId=" + featureTitleId;
+        var titleCardBox = document.querySelector("#title-card-box")
+        document.getElementById("title-card-box");
+        titleCardBox.appendChild(dynaTitleCard);
+        document.getElementById("selection-title"+i).textContent=titles.titles[i].title;
+        document.getElementById("release-year"+i).textContent=titles.titles[i].year
+        document.getElementById("details-button"+i).textContent="Title Details";
+        document.getElementById("details-button"+i).setAttribute("title-id", titles.titles[i].id); 
+      }
     }
-  
-};
-  
-  searchSelectedGenre()
+}
 
-  detailsButtonEl.addEventListener("click", detailsButtonClickHandler);
+
+var detailsButtonClickHandler = function(event) {
+  // get the title id attribute from the clicked element
+  var featureTitleId = event.target.getAttribute('title-id');
+  //console.log(id);
+  if (featureTitleId) {
+    window.location.href ="./finalpage.html?featureTitleId=" + featureTitleId;
+  }
+
+};
+
+searchSelectedGenre()
+
+detailsButtonEl.addEventListener("click", detailsButtonClickHandler);
