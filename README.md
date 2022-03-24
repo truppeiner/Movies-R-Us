@@ -1,25 +1,28 @@
-var castURL =
-            "https://api.themoviedb.org/3/movie/" +
-            featureImbdId +
-            "/credits?api_key=921ba47b5c4b85bc48dd2db9202db1be&language=en-US";
-          fetch(castURL).then(function (response) {
-            if (response.ok) {
-              response.json().then(function (data) {
-                console.log(data);
-                var director = Object.values(data.crew[1])[4];
-                var cast =
-                  Object.values(data.cast[0])[4] +
-                  " and " +
-                  Object.values(data.cast[1])[4];
-                // var cast1 = Object.values(data.cast[1])[4];
+# Movies-R-Us, Inc
 
-                // console.log(cast1);
-                console.log(cast);
-                console.log(director);
-                document.getElementById("feature-director").textContent =
-                  director;
-                document.getElementById("feature-actors").textContent = cast;
-                // document.getElementById("feature-actors").textContent = cast1;
-              });
-            }
-          });
+## Purpose
+A website that offers a list of movie hits, depending on the genre you selected.
+
+## Built With
+* HTML
+* CSS
+* Javascript
+
+## Website
+https://truppeiner.github.io/Movies-R-Us/
+
+## Contribution
+Made with ❤️ by 
+[Kevin Long]
+[Govnor Payne]
+[Thomas Ruppeiner]
+[Scott Obregon]
+[Roy Velasquez]
+
+![MoviesRUs1](https://user-images.githubusercontent.com/97925568/160005448-641bfe21-1d2c-4f12-be21-b75006c0941b.png)
+
+![MoviesRus2](https://user-images.githubusercontent.com/97925568/160005584-58a768e7-8797-4cbb-abdc-effe872ee274.png)
+
+![MoviesRus3](https://user-images.githubusercontent.com/97925568/160005653-348b76a9-530b-4533-a225-d8f83a84689d.png)
+
+### ©️2022 Movies-R-Us, Inc
