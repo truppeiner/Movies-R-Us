@@ -37,7 +37,7 @@ var displaySelectedTitle = function(genre) {
           var featurePosterUrl = data.poster;
           var featureBackdropUrl = data.backdrop;
           var featureTrailerUrl = data.trailer;
-          var featureTrailerThumbnailUrl = data.trailer_thumbnail;
+          var featureTrailerThumbnail = data.trailer_thumbnail;
           // append feature title data to final page display
           document.getElementById("feature-title").textContent=featureTitle;
           document.getElementById("main-feature-title").textContent=featureTitle;
@@ -51,25 +51,29 @@ var displaySelectedTitle = function(genre) {
           var featurePoster = document.getElementById("feature-poster");
           featurePoster.setAttribute("src", featurePosterUrl);
           document.getElementById("feature-hero").style.backgroundImage = 'url(' + featureBackdropUrl;
-      // pick up here*************
+          var trailerThumbnail = document.getElementById("trailer-thumbnail");
+          trailerThumbnail.setAttribute("src", featureTrailerThumbnail);
+         // trailerThumbnail.setAttribute("href", featureTrailerUrl)
+          document.getElementById("trailer-link").setAttribute("href", featureTrailerUrl);
+          document.getElementById("trailer-link").setAttribute("target", "_blank");
 
-      var castURL = "https://api.themoviedb.org/3/movie/" + featureImbdId + "/credits?api_key=921ba47b5c4b85bc48dd2db9202db1be&language=en-US"; 
-      fetch(castURL).then(function (response) {
-         if (response.ok) { 
-           response.json().then(function (data) { 
-           console.log(data); 
-           var director = Object.values(data.crew[1])[4]; 
-           var cast = Object.values(data.cast[0])[4] + " and " + Object.values(data.cast[1])[4]; 
-           // var cast1 = Object.values(data.cast[1])[4];
-           // console.log(cast1);
-           console.log(cast);
-           console.log(director);
-           document.getElementById("feature-director").textContent = director;
-           document.getElementById("feature-actors").textContent = cast;
-          // document.getElementById("feature-actors").textContent = cast1;
-          });
-    }
-  });
+          var castURL = "https://api.themoviedb.org/3/movie/" + featureImbdId + "/credits?api_key=921ba47b5c4b85bc48dd2db9202db1be&language=en-US"; 
+          fetch(castURL).then(function (response) {
+          if (response.ok) { 
+            response.json().then(function (data) { 
+            console.log(data); 
+            var director = Object.values(data.crew[1])[4]; 
+            var cast = Object.values(data.cast[0])[4] + " and " + Object.values(data.cast[1])[4]; 
+            // var cast1 = Object.values(data.cast[1])[4];
+            // console.log(cast1);
+            console.log(cast);
+            console.log(director);
+            document.getElementById("feature-director").textContent = director;
+            document.getElementById("feature-actors").textContent = cast;
+           // document.getElementById("feature-actors").textContent = cast1;
+           });
+          }
+        });
       })
     } else {
       alert('error: ' + response.statusText);
@@ -78,9 +82,6 @@ var displaySelectedTitle = function(genre) {
   .catch(function(error) {
       console.log(error);
        });
-
-  
-
 };
 
 displaySelectedTitle()
