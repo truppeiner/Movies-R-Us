@@ -38,3 +38,6 @@ body {
 footer {
     background-color: hsl(48, 100%, 96%) !important;
 }
+.streaming-link {
+    margin:10px;
+}

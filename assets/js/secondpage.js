@@ -46,7 +46,7 @@ var searchSelectedGenre = function(genre) {
         document.getElementById("selected-genre").textContent=selectedGenre;
     }
     // format the watchmode api url for genre title list
-    var watchModeGenreUrl = 'https://api.watchmode.com/v1/list-titles?genres=' + genre + '&limit=100&apiKey=WIu3mU2xnsXe9BTf7WlTqfAmFnw3uwR5kTG1RtbB';
+    var watchModeGenreUrl = 'https://api.watchmode.com/v1/list-titles?genres=' + genre + '&limit=30&apiKey=3vWxYKPiq0kntxPSw8B2hMi3OiBvlMzGkqZPSj6R';
     fetch(watchModeGenreUrl).then(function(response) {
       //request successful
       if (response.ok) {

@@ -4,7 +4,7 @@ var displaySelectedTitle = function(genre) {
   console.log(selectedTitleId);
 
   // format the watchmode api url for selected title details
-  var selectedTitleApiUrl = 'https://api.watchmode.com/v1/title/' + selectedTitleId + '/details/?append_to_response=sources&apiKey=WIu3mU2xnsXe9BTf7WlTqfAmFnw3uwR5kTG1RtbB';
+  var selectedTitleApiUrl = 'https://api.watchmode.com/v1/title/' + selectedTitleId + '/details/?append_to_response=sources&apiKey=3vWxYKPiq0kntxPSw8B2hMi3OiBvlMzGkqZPSj6R';
   fetch(selectedTitleApiUrl).then(function(response) {
     //request successful
     if (response.ok) {
@@ -22,7 +22,7 @@ var displaySelectedTitle = function(genre) {
           console.log(data.backdrop);
           console.log(data.sources);
           console.log(data.trailer_thumbnail);
-          // store desired data in variables
+          // store desired data in variables and append to final page display
           if (data.type ==="tv_series") {
             let featureType = "TV Series"
             document.getElementById("feature-type").textContent=featureType;
@@ -30,6 +30,78 @@ var displaySelectedTitle = function(genre) {
             let featureType = "Movie"
             document.getElementById("feature-type").textContent=featureType;
           }
+
+         
+          const sources = data.sources;
+
+          const disneyPlus = sources.filter(source => source.source_id === 372);
+          if (disneyPlus.length >= 1) {
+            document.getElementById("disney-plus").textContent = "   Disney+   "
+           // let disneyUrl= disneyPlus[0].web_url;
+           // document.getElementById("disney-streaming-link").setAttribute("href", disneyUrl);
+          //  document.getElementById("disney-streaming-link").setAttribute("target", "_blank");
+          //  console.log(disneyPlus[0].name);
+            //console.log(disneyPlus[0].web_url);
+          } else if (disneyPlus.length === 0) {
+           //  let disneyUrl = " ";
+          //   document.getElementById("disney-streaming-link").setAttribute("href", disneyUrl);
+             document.getElementById("disney-plus").textContent = " ";  
+            }
+
+          const netflix = sources.filter(source => source.source_id === 203)
+          if (netflix.length >= 1) {
+              document.getElementById("netflix").textContent = "   Netflix   "
+            } else if (netflix.length === 0) {
+               document.getElementById("netflix").textContent = " ";  
+              }
+
+          const hulu = sources.filter(source => source.source_id === 157)
+          if (hulu.length >= 1) {
+            document.getElementById("hulu").textContent = "   Hulu   "
+          } else if (hulu.length === 0) {
+             document.getElementById("hulu").textContent = " ";  
+            }
+
+          const amazonPrime = sources.filter(source => source.source_id === 26)
+          if (amazonPrime.length >= 1) {
+            document.getElementById("amazon-prime").textContent = "   Amazon Prime Video   "
+          } else if (amazonPrime.length === 0) {
+             document.getElementById("amazon-prime").textContent = " ";  
+            }
+
+          const hboMax = sources.filter(source => source.source_id === 387 )
+          if (hboMax.length >= 1) {
+            document.getElementById("hbo-max").textContent = "   HBO Max   "
+          } else if (netflix.length === 0) {
+             document.getElementById("hbo-max").textContent = " ";  
+            }
+
+
+          console.log(disneyPlus);
+         // if (disneyPlus.length === 0); 
+          //console.log("hi")
+         //  console.log(disneyPlus[0].name);
+          // console.log(disneyPlus[0].web_url);
+          console.log(netflix);
+       //   console.log(netflix[0].name);
+      //    console.log(netflix[0].web_url);
+          console.log(hulu);
+       //   console.log(hulu[0].name);
+       //   console.log(hulu[0].web_url);
+          console.log(amazonPrime);
+         // console.log(amazonPrime[0].name);
+        //  console.log(amazonPrime[0].web_url);
+          console.log(hboMax);
+        //  console.log(hboMax[0].name);
+        //  console.log(hboMax[0].web_url);
+         // console.log(featureStreamingSources);
+         // console.log(data.sources[34]);
+
+    
+
+        
+
+
           var featureTitle = data.title;
           var featureId = data.id;
           var featureImbdId = data.imdb_id;
@@ -76,6 +148,7 @@ var displaySelectedTitle = function(genre) {
           if (response.ok) { 
             response.json().then(function (data) { 
             console.log(data); 
+
             var director = Object.values(data.crew[1])[4]; 
             var cast = Object.values(data.cast[0])[4] + ", " + Object.values(data.cast[1])[4] + ", " + Object.values(data.cast[2])[4] + ", " + Object.values(data.cast[3])[4] + ", " + Object.values(data.cast[4])[4] + ", and " + Object.values(data.cast[5])[4]; 
             // var cast1 = Object.values(data.cast[1])[4];
