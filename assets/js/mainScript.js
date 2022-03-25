@@ -13,7 +13,7 @@ window.onload = function () {
       number = "Comedy";
       break;
     case 6:
-      number = "Doumentry";
+      number = "Documentry";
       break;
     case 7:
       number = "Drama";
