@@ -114,34 +114,59 @@
 
     <!-- BEGIN MAIN SECTION -->
     <section class="main m-1 p-1" id="feature-details">
-        <div class="columns">
-            <!-- poster section -->
-            <div class="column is-3 has-text-centered poster" id="poster-box">
-                <!-- append poster here -->
-                <img id="feature-poster" src="" alt="poster" class="p-2"/>
-            </div>
-            <!-- end poster section -->
-            <!-- information section -->
-            <div class="column is-5">
-                <div class="content has-background-info has-text-warning info-nest">
-                    <!-- append title here -->
-                    <h2 class="section-header has-text-warning title-display" id="feature-title"></h2>
-                    <!-- append type here -->
-                    <p class="type-display" id="feature-type"></p>
-                    <!-- append genre here -->
-                    <p class="genre-display" id="feature-genre"></p>
+      <div class="columns">
+        <!-- poster section -->
+        <div class="column is-3 has-text-centered poster" id="poster-box">
+          <!-- append poster here -->
+          <img id="feature-poster" src="" alt="poster" class="p-2" />
+        </div>
+        <!-- end poster section -->
+        <!-- information section -->
+        <div class="column is-5">
+          <div class="content has-background-info has-text-warning info-nest">
+            <!-- append title here -->
+            <h2
+              class="section-header has-text-warning title-display"
+              id="feature-title"
+            ></h2>
+            <!-- append genre here -->
+            <p class="genre-display" id="feature-genre"></p>
+          </div>
+          <div class="columns content">
+            <div class="column">
+              <div
+                class="content has-background-info has-text-warning info-nest"
+              >
+                <h3 class="has-text-warning">Plot Synopsis</h3>
+                <!-- append plot here -->
+                <p class="plot-display" id="feature-plot-overview"></p>
+              </div>
+              <div class="columns">
+                <div
+                  class="column has-background-info has-text-warning info-nest"
+                >
+                  <h3 class="has-text-warning">Director</h3>
+                  <!-- append director here-->
+                  <p class="dir-display" id="feature-director"></p>
+                </div>
+                <div
+                  class="column has-background-info has-text-warning info-nest"
+                >
+                  <h3 class="has-text-warning">Actors</h3>
+                  <!-- append actors here -->
+                  <p class="act-display" id="feature-actors"></p>
                 </div>
               </div>
             </div>
-            <!-- end information section -->
-            <!-- where watch section -->
-            <div class="column is-4">
-                <div class="content has-background-info has-text-warning where-watch">
-                    <h2 class="section-header has-text-warning has-text-centered">Watch Trailer</h2>
-                        <div class="level level-item has-text-centered">
-                            <a id="trailer-link"><img id="trailer-thumbnail"></a>
-                        </div>
-                </div>
+          </div>
+        </div>
+        <!-- end information section -->
+        <!-- where watch section -->
+        <div class="column is-4">
+          <div class="content has-background-info has-text-warning where-watch">
+            <h2 class="section-header has-text-warning">Watch Trailer</h2>
+            <div>
+              <a id="trailer-link"><img id="trailer-thumbnail" /></a>
             </div>
           </div>
         </div>

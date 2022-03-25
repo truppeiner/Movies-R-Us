@@ -27,13 +27,6 @@ var displaySelectedTitle = function (genre) {
           console.log(data.sources);
           console.log(data.trailer_thumbnail);
           // store desired data in variables
-          if (data.type === "tv_series") {
-            let featureType = "TV Series";
-            document.getElementById("feature-type").textContent = featureType;
-          } else if (data.type === "movie") {
-            let featureType = "Movie";
-            document.getElementById("feature-type").textContent = featureType;
-          }
           var featureTitle = data.title;
           var featureId = data.id;
           var featureImbdId = data.imdb_id;
@@ -43,8 +36,6 @@ var displaySelectedTitle = function (genre) {
           var featureRating = data.us_rating;
           var featureRunTimeMinutes = data.runtime_minutes;
           var featureGenre = data.genre_names[0];
-          var featureGenre2 = data.genre_names[1];
-          var featureGenre3 = data.genre_names[2];
           var featurePlotOverview = data.plot_overview;
           var featurePosterUrl = data.poster;
           var featureBackdropUrl = data.backdrop;
@@ -62,16 +53,7 @@ var displaySelectedTitle = function (genre) {
           document.getElementById("feature-rating").textContent = featureRating;
           document.getElementById("feature-runtime-minutes").textContent =
             featureRunTimeMinutes;
-          document.getElementById("feature-genre").textContent =
-            featureGenre + " - " + featureGenre2 + " - " + featureGenre3;
-          if (featureGenre3 === undefined) {
-            document.getElementById("feature-genre").textContent =
-              featureGenre + " - " + featureGenre2 + " - " + "";
-          }
-          if (featureGenre2 === undefined) {
-            document.getElementById("feature-genre").textContent =
-              featureGenre + "";
-          }
+          document.getElementById("feature-genre").textContent = featureGenre;
           document.getElementById("feature-plot-overview").textContent =
             featurePlotOverview;
           var featurePoster = document.getElementById("feature-poster");
@@ -87,7 +69,7 @@ var displaySelectedTitle = function (genre) {
           document
             .getElementById("trailer-link")
             .setAttribute("target", "_blank");
-          // call movie database for cast list
+
           var castURL =
             "https://api.themoviedb.org/3/movie/" +
             featureImbdId +
@@ -96,20 +78,17 @@ var displaySelectedTitle = function (genre) {
             if (response.ok) {
               response.json().then(function (data) {
                 console.log(data);
-                // var director = Object.values(data.crew[1])[4];
+                var director = Object.values(data.crew[1])[4];
                 var cast =
                   Object.values(data.cast[0])[4] +
-                  " ,  " +
-                  Object.values(data.cast[1])[4] +
-                  " , " +
+                  " and " +
                   Object.values(data.cast[1])[4];
-
                 // var cast1 = Object.values(data.cast[1])[4];
                 // console.log(cast1);
                 console.log(cast);
-                // console.log(director);
-                // document.getElementById("feature-director").textContent =
-                // director;
+                console.log(director);
+                document.getElementById("feature-director").textContent =
+                  director;
                 document.getElementById("feature-actors").textContent = cast;
                 // document.getElementById("feature-actors").textContent = cast1;
               });
