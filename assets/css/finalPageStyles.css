@@ -45,8 +45,7 @@ footer {
 
 #netflix-link:visited, #hbo-max-link:visited, #disney-plus-link:visited, #hulu-link:visited, #amazon-link:visited {
     color: hsl(48, 100%, 67%);
+    margin:10px;
 }
 
-.streaming-link {
-    margin: 8px;
-}
+
