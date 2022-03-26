@@ -38,14 +38,10 @@ body {
 footer {
     background-color: hsl(48, 100%, 96%) !important;
 }
-#netflix-link, #hbo-max-link, #disney-plus-link, #hulu-link, #amazon-link {
+#netflix, #hbo-max, #disney-plus, #hulu, #amazon {
     margin:10px;
     color: hsl(48, 100%, 67%);
 }
 
-#netflix-link:visited, #hbo-max-link:visited, #disney-plus-link:visited, #hulu-link:visited, #amazon-link:visited {
-    color: hsl(48, 100%, 67%);
-    margin:10px;
-}
 
 

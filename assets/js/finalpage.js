@@ -39,18 +39,19 @@ var displaySelectedTitle = function(genre) {
             document.getElementById("disney-plus").textContent = "   Disney+   "
            // let disneyUrl= disneyPlus[0].web_url;
            // document.getElementById("disney-streaming-link").setAttribute("href", disneyUrl);
-          //  document.getElementById("disney-streaming-link").setAttribute("target", "_blank");
-          //  console.log(disneyPlus[0].name);
-            //console.log(disneyPlus[0].web_url);
+           // document.getElementById("disney-streaming-link").setAttribute("target", "_blank");
+           // console.log(disneyPlus[0].name);
+           // console.log(disneyPlus[0].web_url);
           } else if (disneyPlus.length === 0) {
-           //  let disneyUrl = " ";
-          //   document.getElementById("disney-streaming-link").setAttribute("href", disneyUrl);
+           // let disneyUrl = " ";
+           // document.getElementById("disney-streaming-link").setAttribute("href", disneyUrl);
              document.getElementById("disney-plus").textContent = " ";  
             }
 
           const netflix = sources.filter(source => source.source_id === 203)
           if (netflix.length >= 1) {
               document.getElementById("netflix").textContent = "   Netflix   "
+              
             } else if (netflix.length === 0) {
                document.getElementById("netflix").textContent = " ";  
               }
@@ -76,24 +77,23 @@ var displaySelectedTitle = function(genre) {
              document.getElementById("hbo-max").textContent = " ";  
             }
 
-
           console.log(disneyPlus);
          // if (disneyPlus.length === 0); 
-          //console.log("hi")
-         //  console.log(disneyPlus[0].name);
-          // console.log(disneyPlus[0].web_url);
+         // console.log("hi")
+         // console.log(disneyPlus[0].name);
+         // console.log(disneyPlus[0].web_url);
           console.log(netflix);
-       //   console.log(netflix[0].name);
-      //    console.log(netflix[0].web_url);
+         // console.log(netflix[0].name);
+         // console.log(netflix[0].web_url);
           console.log(hulu);
-       //   console.log(hulu[0].name);
-       //   console.log(hulu[0].web_url);
+         // console.log(hulu[0].name);
+         // console.log(hulu[0].web_url);
           console.log(amazonPrime);
          // console.log(amazonPrime[0].name);
-        //  console.log(amazonPrime[0].web_url);
+         // console.log(amazonPrime[0].web_url);
           console.log(hboMax);
-        //  console.log(hboMax[0].name);
-        //  console.log(hboMax[0].web_url);
+         // console.log(hboMax[0].name);
+         // console.log(hboMax[0].web_url);
          // console.log(featureStreamingSources);
          // console.log(data.sources[34]);
 
