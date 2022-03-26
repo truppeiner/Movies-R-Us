@@ -23,6 +23,7 @@ var displaySelectedTitle = function(genre) {
           console.log(data.sources);
           console.log(data.trailer_thumbnail);
           // store desired data in variables and append to final page display
+          //show type
           if (data.type ==="tv_series") {
             let featureType = "TV Series"
             document.getElementById("feature-type").textContent=featureType;
@@ -31,9 +32,8 @@ var displaySelectedTitle = function(genre) {
             document.getElementById("feature-type").textContent=featureType;
           }
 
-         
+         // streaming sources
           const sources = data.sources;
-
           const disneyPlus = sources.filter(source => source.source_id === 372);
           if (disneyPlus.length >= 1) {
             document.getElementById("disney-plus").textContent = "   Disney+   "
@@ -97,6 +97,7 @@ var displaySelectedTitle = function(genre) {
          // console.log(featureStreamingSources);
          // console.log(data.sources[34]);
 
+          // feature title data
           var featureTitle = data.title;
           var featureId = data.id;
           var featureImbdId = data.imdb_id;
@@ -140,6 +141,7 @@ var displaySelectedTitle = function(genre) {
          // trailerThumbnail.setAttribute("href", featureTrailerUrl)
           document.getElementById("trailer-link").setAttribute("href", featureTrailerUrl);
           document.getElementById("trailer-link").setAttribute("target", "_blank");
+
          // call movie database for cast list
           var castURL = "https://api.themoviedb.org/3/movie/" + featureImbdId + "/credits?api_key=921ba47b5c4b85bc48dd2db9202db1be&language=en-US"; 
           fetch(castURL).then(function (response) {
@@ -153,10 +155,10 @@ var displaySelectedTitle = function(genre) {
             // console.log(cast1);
             console.log(cast);
             console.log(director);
-          //  document.getElementById("feature-director").textContent = director;
+            //  document.getElementById("feature-director").textContent = director;
             document.getElementById("feature-actors").textContent = cast;
-           //document.getElementById("feature-actors").textContent = cast1;
-           });
+            //document.getElementById("feature-actors").textContent = cast1;
+            });
           }
         });
       })
