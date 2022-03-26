@@ -121,10 +121,13 @@ var displaySelectedTitle = function(genre) {
           // append feature title data to final page display
           document.getElementById("feature-title").textContent=featureTitle;
           document.getElementById("main-feature-title").textContent=featureTitle;
-          document.getElementById("feature-year").textContent=featureYear;
+          document.getElementById("feature-year").textContent=featureYear +"     ";
           document.getElementById("feature-user-rating").textContent=featureUserRating;
           document.getElementById("feature-critic-score").textContent=featureCriticScore;
-          document.getElementById("feature-rating").textContent=featureRating;
+          document.getElementById("feature-rating").textContent="     Rated: " +featureRating;
+          if (featureRating === null) {
+            document.getElementById("feature-rating").textContent="     Rated: Not Rated";
+          };
           document.getElementById("feature-runtime-minutes").textContent=featureRunTimeMinutes;
           document.getElementById("feature-genre").textContent=featureGenre +" - "+ featureGenre2+" - "+featureGenre3;
           if (featureGenre3 === undefined) {
