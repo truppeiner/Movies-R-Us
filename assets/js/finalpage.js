@@ -97,11 +97,6 @@ var displaySelectedTitle = function(genre) {
          // console.log(featureStreamingSources);
          // console.log(data.sources[34]);
 
-    
-
-        
-
-
           var featureTitle = data.title;
           var featureId = data.id;
           var featureImbdId = data.imdb_id;
@@ -160,7 +155,7 @@ var displaySelectedTitle = function(genre) {
             console.log(director);
           //  document.getElementById("feature-director").textContent = director;
             document.getElementById("feature-actors").textContent = cast;
-           // document.getElementById("feature-actors").textContent = cast1;
+           //document.getElementById("feature-actors").textContent = cast1;
            });
           }
         });
