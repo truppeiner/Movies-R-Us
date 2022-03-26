@@ -65,7 +65,7 @@ var displaySelectedTitle = function(genre) {
 
           const amazonPrime = sources.filter(source => source.source_id === 26)
           if (amazonPrime.length >= 1) {
-            document.getElementById("amazon-prime").textContent = "   Amazon Prime Video   "
+             document.getElementById("amazon-prime").textContent = "   Amazon Prime Video   "
           } else if (amazonPrime.length === 0) {
              document.getElementById("amazon-prime").textContent = " ";  
             }
