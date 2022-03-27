@@ -1,6 +1,8 @@
+var genArr = [];
+var savePicksEl = document.querySelector("#save-button");
 window.onload = function () {
   var picks = localStorage.getItem("selection");
-  var savePicksEl = document.querySelector(".save-button");
+
   let parPicks = JSON.parse(picks);
   //how to sort element
   //this sort can only be done on Arrays
@@ -46,13 +48,27 @@ window.onload = function () {
       number = "Fantasy";
       break;
   }
-  console.log(number);
-  savePicksEl.textContent = number;
+  lastPick(number);
+
+  // savePicksEl.textContent = number;
   // savePicksEl.innerHTML = parPicks;
 
   // savePicksEl.appendChild(parPicks);
   // console.log(picks);
 };
+function lastPick(number) {
+  lastPick.innerHTML = "";
+
+  for (var i = lastPick.length - 1; i >= 0; i--) {
+    var btn = document.createElement("input");
+    btn.setAttribute("type", "image");
+    btn.setAttribute("src", "./assets/Images/" + number + ".png");
+    // btn.setAttribute("genre", genre);
+    btn.classList.add("btn");
+    savePicksEl.append(btn);
+  }
+  console.log(typeof genre);
+}
 var actionButtonEl = document.querySelector("#genre-buttons");
 var genreSearchTerm = document.querySelector("#genre-search-term");
 var genreResultsContainerEl = document.querySelector(
@@ -72,6 +88,7 @@ var titleBoxEl = document.querySelector("#title-box");
 var buttonClickHandler = function (event) {
   // get the genre attribute from the clicked element
   var genre = event.target.getAttribute("genre");
+
   if (genre) {
     window.location.href = "./common/secondpage.html?genre=" + genre;
   }
