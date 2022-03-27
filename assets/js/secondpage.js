@@ -90,7 +90,6 @@ var searchSelectedGenre = function(genre) {
         dynaTitleCard.setAttribute("id", "title-card")
         dynaTitleCard.classList="card column is-one-fifth"
         dynaTitleCard.innerHTML +='<h3 class="card-header" "movie-title" id="selection-title'+i+'"></h3><span class="year" id="release-year'+i+'"></span><button id="details-button'+i+'" class="btn"></button>'                                          
-        
         var titleCardBox = document.querySelector("#title-card-box")
         document.getElementById("title-card-box");
         titleCardBox.appendChild(dynaTitleCard);
