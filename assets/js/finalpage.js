@@ -43,16 +43,16 @@ var displaySelectedTitle = function(genre) {
           
           const netflix = sources.filter(source => source.source_id === 203)
           if (netflix.length >= 1) {
-           let netflixTitleUrl= netflix[0].web_url;
-           document.getElementById("streaming-links").innerHTML +='<a href="" target="_blank" id="netflix-link"><h4 id="netflix" >Netflix</h4></a>'
-           document.getElementById("netflix-link").setAttribute("href", netflixTitleUrl);
-           } 
+            let netflixTitleUrl= netflix[0].web_url;
+            document.getElementById("streaming-links").innerHTML +='<a href="" target="_blank" id="netflix-link"><h4 id="netflix" >Netflix</h4></a>'
+            document.getElementById("netflix-link").setAttribute("href", netflixTitleUrl);
+          } 
 
           const hulu = sources.filter(source => source.source_id === 157)
           if (hulu.length >= 1) {
           let huluTitleUrl = hulu[0].web_url;
-          document.getElementById("streaming-links").innerHTML +='<a href=" " target="_blank" id="hulu-link"><h4 id="hulu">Hulu</h4></a>'
-          document.getElementById("hulu-link").setAttribute("href", huluTitleUrl);
+            document.getElementById("streaming-links").innerHTML +='<a href=" " target="_blank" id="hulu-link"><h4 id="hulu">Hulu</h4></a>'
+            document.getElementById("hulu-link").setAttribute("href", huluTitleUrl);
           } 
 
           const amazonPrime = sources.filter(source => source.source_id === 26)
