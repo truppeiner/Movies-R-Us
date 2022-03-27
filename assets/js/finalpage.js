@@ -27,53 +27,6 @@ var displaySelectedTitle = function (genre) {
           console.log(data.trailer_thumbnail);
           // store desired data in variables and append to final page display
           //show type
-<<<<<<< HEAD
-          if (data.type ==="tv_series") {
-            let featureType = "TV Series"
-            document.getElementById("feature-type").textContent=featureType;
-          } else if (data.type ==="movie") {
-            let featureType = "Movie"
-            document.getElementById("feature-type").textContent=featureType;
-          }
-
-         // streaming source url links for selected titled
-          const sources = data.sources;
-          const disneyPlus = sources.filter(source => source.source_id === 372);
-          if (disneyPlus.length >= 1) {
-            let disneyTitleUrl= disneyPlus[0].web_url;
-            console.log(disneyTitleUrl);
-            document.getElementById("streaming-links").innerHTML +='<a href="" target="_blank" id="disney-plus-link"><h4 id="disney-plus">Disney+</h4></a>' 
-            document.getElementById("disney-plus-link").setAttribute("href", disneyTitleUrl);
-          } 
-          
-          const netflix = sources.filter(source => source.source_id === 203)
-          if (netflix.length >= 1) {
-           let netflixTitleUrl= netflix[0].web_url;
-           document.getElementById("streaming-links").innerHTML +='<a href="" target="_blank" id="netflix-link"><h4 id="netflix" >Netflix</h4></a>'
-           document.getElementById("netflix-link").setAttribute("href", netflixTitleUrl);
-           } 
-
-          const hulu = sources.filter(source => source.source_id === 157)
-          if (hulu.length >= 1) {
-          let huluTitleUrl = hulu[0].web_url;
-          document.getElementById("streaming-links").innerHTML +='<a href=" " target="_blank" id="hulu-link"><h4 id="hulu">Hulu</h4></a>'
-          document.getElementById("hulu-link").setAttribute("href", huluTitleUrl);
-          } 
-
-          const amazonPrime = sources.filter(source => source.source_id === 26)
-          if (amazonPrime.length >= 1) {
-             let amazonPrimeTitleUrl = amazonPrime[0].web_url;
-             document.getElementById("streaming-links").innerHTML +='<a href=" " target="_blank" id="amazon-link"><h4 id="amazon-prime">Amazon Prime Video</h4></a>'
-             document.getElementById("amazon-link").setAttribute("href", amazonPrimeTitleUrl);
-          } 
-
-          const hboMax = sources.filter(source => source.source_id === 387 )
-          if (hboMax.length >= 1) {
-            let hboTitleUrl = hboMax[0].web_url
-            document.getElementById("streaming-links").innerHTML +='<a href="" target="_blank" id="hbo-max-link"><h4 id="hbo-max">HBO Max</h4></a>'
-            document.getElementById("hbo-max-link").setAttribute("href", hboTitleUrl);
-          } 
-=======
           if (data.type === "tv_series") {
             let featureType = "TV Series";
             document.getElementById("feature-type").textContent = featureType;
@@ -138,7 +91,6 @@ var displaySelectedTitle = function (genre) {
               .getElementById("hbo-max-link")
               .setAttribute("href", hboTitleUrl);
           }
->>>>>>> 98f066684b7e73976f0fecde56b1b13921d86835
           // log streaming source data
           console.log(disneyPlus);
           console.log(netflix);
@@ -164,19 +116,6 @@ var displaySelectedTitle = function (genre) {
           var featureTrailerUrl = data.trailer;
           var featureTrailerThumbnail = data.trailer_thumbnail;
           // append feature title data to final page display
-<<<<<<< HEAD
-          document.getElementById("feature-title").textContent=featureTitle;
-          document.getElementById("main-feature-title").textContent=featureTitle;
-          document.getElementById("feature-year").textContent=featureYear +"     ";
-          document.getElementById("feature-user-rating").textContent=featureUserRating;
-          document.getElementById("feature-critic-score").textContent=featureCriticScore;
-          document.getElementById("feature-rating").textContent="     Rated: " +featureRating;
-          if (featureRating === null) {
-            document.getElementById("feature-rating").textContent="     Rated: Not Rated";
-          };
-          document.getElementById("feature-runtime-minutes").textContent=featureRunTimeMinutes;
-          document.getElementById("feature-genre").textContent=featureGenre +" - "+ featureGenre2+" - "+featureGenre3;
-=======
           document.getElementById("feature-title").textContent = featureTitle;
           document.getElementById("main-feature-title").textContent =
             featureTitle;
@@ -196,7 +135,6 @@ var displaySelectedTitle = function (genre) {
             featureRunTimeMinutes;
           document.getElementById("feature-genre").textContent =
             featureGenre + " - " + featureGenre2 + " - " + featureGenre3;
->>>>>>> 98f066684b7e73976f0fecde56b1b13921d86835
           if (featureGenre3 === undefined) {
             document.getElementById("feature-genre").textContent =
               featureGenre + " - " + featureGenre2 + " - " + "";
@@ -213,25 +151,6 @@ var displaySelectedTitle = function (genre) {
             "url(" + featureBackdropUrl;
           var trailerThumbnail = document.getElementById("trailer-thumbnail");
           trailerThumbnail.setAttribute("src", featureTrailerThumbnail);
-<<<<<<< HEAD
-          document.getElementById("trailer-link").setAttribute("href", featureTrailerUrl);
-          document.getElementById("trailer-link").setAttribute("target", "_blank");
-
-       // call movie database for cast list
-          var castURL = "https://api.themoviedb.org/3/movie/" + featureImbdId + "/credits?api_key=921ba47b5c4b85bc48dd2db9202db1be&language=en-US"; 
-          fetch(castURL).then(function (response) {
-          if (response.ok) { 
-            response.json().then(function (data) { 
-            console.log(data); 
-         // var director = Object.values(data.crew[1])[4]; 
-            var cast = Object.values(data.cast[0])[4] + ", " + Object.values(data.cast[1])[4] + ", " + Object.values(data.cast[2])[4] + ", " + Object.values(data.cast[3])[4] + ", " + Object.values(data.cast[4])[4] + ", and " + Object.values(data.cast[5])[4]; 
-            console.log(cast);
-         // console.log(director);
-         // document.getElementById("feature-director").textContent = director;
-            document.getElementById("feature-actors").textContent = cast;
-            });
-          }
-=======
           document
             .getElementById("trailer-link")
             .setAttribute("href", featureTrailerUrl);
@@ -268,7 +187,6 @@ var displaySelectedTitle = function (genre) {
               });
             }
           });
->>>>>>> 98f066684b7e73976f0fecde56b1b13921d86835
         });
       } else {
         alert("error: " + response.statusText);
