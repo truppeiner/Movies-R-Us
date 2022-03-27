@@ -37,10 +37,10 @@ var displaySelectedTitle = function(genre) {
           const disneyPlus = sources.filter(source => source.source_id === 372);
           if (disneyPlus.length >= 1) {
          //   document.getElementById("disney-plus").textContent = "   Disney+   "
-            let disneyUrl= disneyPlus[0].web_url;
-            console.log(disneyUrl);
+            let disneyTitleUrl= disneyPlus[0].web_url;
+            console.log(disneyTitleUrl);
             document.getElementById("streaming-links").innerHTML +='<a href="" target="_blank" id="disney-plus-link"><h4 id="disney-plus">Disney+</h4></a>' 
-            document.getElementById("disney-plus-link").setAttribute("href", disneyUrl);
+            document.getElementById("disney-plus-link").setAttribute("href", disneyTitleUrl);
            // document.getElementById("disney-streaming-link").setAttribute("target", "_blank");
            // console.log(disneyPlus[0].name);
            // console.log(disneyPlus[0].web_url);
@@ -53,7 +53,9 @@ var displaySelectedTitle = function(genre) {
           const netflix = sources.filter(source => source.source_id === 203)
           if (netflix.length >= 1) {
            //   document.getElementById("netflix").textContent = "   Netflix   "
-           document.getElementById("streaming-links").innerHTML +='<a href="https://www.netflix.com/" target="_blank" id="netflix-link"><h4 id="netflix" >Netflix</h4></a>'
+           let netflixTitleUrl= netflix[0].web_url;
+           document.getElementById("streaming-links").innerHTML +='<a href="" target="_blank" id="netflix-link"><h4 id="netflix" >Netflix</h4></a>'
+           document.getElementById("netflix-link").setAttribute("href", netflixTitleUrl);
            } //else if (netflix.length === 0) {
              // document.getElementById("netflix").textContent = " ";  
          //   }
