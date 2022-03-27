@@ -1,25 +1,11 @@
-var castURL =
-            "https://api.themoviedb.org/3/movie/" +
-            featureImbdId +
-            "/credits?api_key=921ba47b5c4b85bc48dd2db9202db1be&language=en-US";
-          fetch(castURL).then(function (response) {
-            if (response.ok) {
-              response.json().then(function (data) {
-                console.log(data);
-                var director = Object.values(data.crew[1])[4];
-                var cast =
-                  Object.values(data.cast[0])[4] +
-                  " and " +
-                  Object.values(data.cast[1])[4];
-                // var cast1 = Object.values(data.cast[1])[4];
+## User Story
 
-                // console.log(cast1);
-                console.log(cast);
-                console.log(director);
-                document.getElementById("feature-director").textContent =
-                  director;
-                document.getElementById("feature-actors").textContent = cast;
-                // document.getElementById("feature-actors").textContent = cast1;
-              });
-            }
-          });
+```
+AS A subscriber to multiple movie and television streaming services 
+
+I WANT to be able to browse trending available titles by genre across all of the major streaming services 
+
+SO THAT I can select an available title to watch from any of the services without having to toggle back and forth among the various multiple apps of the different streaming services.
+AND SO THAT after selecting a title to watch I can link directly to the streaming service on which the title is available. 
+
+```

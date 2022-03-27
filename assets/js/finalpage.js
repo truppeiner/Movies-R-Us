@@ -36,46 +36,51 @@ var displaySelectedTitle = function(genre) {
           const sources = data.sources;
           const disneyPlus = sources.filter(source => source.source_id === 372);
           if (disneyPlus.length >= 1) {
-            document.getElementById("disney-plus").textContent = "   Disney+   "
-           // let disneyUrl= disneyPlus[0].web_url;
-           // document.getElementById("disney-streaming-link").setAttribute("href", disneyUrl);
+         //   document.getElementById("disney-plus").textContent = "   Disney+   "
+            let disneyUrl= disneyPlus[0].web_url;
+            console.log(disneyUrl);
+            document.getElementById("streaming-links").innerHTML +='<a href="" target="_blank" id="disney-plus-link"><h4 id="disney-plus">Disney+</h4></a>' 
+            document.getElementById("disney-plus-link").setAttribute("href", disneyUrl);
            // document.getElementById("disney-streaming-link").setAttribute("target", "_blank");
            // console.log(disneyPlus[0].name);
            // console.log(disneyPlus[0].web_url);
-          } else if (disneyPlus.length === 0) {
+          } //else if (disneyPlus.length === 0) {
            // let disneyUrl = " ";
            // document.getElementById("disney-streaming-link").setAttribute("href", disneyUrl);
-             document.getElementById("disney-plus").textContent = " ";  
-            }
+           //  document.getElementById("disney-plus").textContent = " ";  
+         //   }
 
           const netflix = sources.filter(source => source.source_id === 203)
           if (netflix.length >= 1) {
-              document.getElementById("netflix").textContent = "   Netflix   "
-              
-            } else if (netflix.length === 0) {
-               document.getElementById("netflix").textContent = " ";  
-              }
+           //   document.getElementById("netflix").textContent = "   Netflix   "
+           document.getElementById("streaming-links").innerHTML +='<a href="https://www.netflix.com/" target="_blank" id="netflix-link"><h4 id="netflix" >Netflix</h4></a>'
+           } //else if (netflix.length === 0) {
+             // document.getElementById("netflix").textContent = " ";  
+         //   }
 
           const hulu = sources.filter(source => source.source_id === 157)
           if (hulu.length >= 1) {
-            document.getElementById("hulu").textContent = "   Hulu   "
-          } else if (hulu.length === 0) {
-             document.getElementById("hulu").textContent = " ";  
-            }
+          //  document.getElementById("hulu").textContent = "   Hulu   "
+          document.getElementById("streaming-links").innerHTML +='<a href="https://www.hulu.com/" target="_blank" id="hulu-link"><h4 id="hulu">Hulu</h4></a>'
+          } //else if (hulu.length === 0) {
+           //  document.getElementById("hulu").textContent = " ";  
+         // }
 
           const amazonPrime = sources.filter(source => source.source_id === 26)
           if (amazonPrime.length >= 1) {
-             document.getElementById("amazon-prime").textContent = "   Amazon Prime Video   "
-          } else if (amazonPrime.length === 0) {
-             document.getElementById("amazon-prime").textContent = " ";  
-            }
+          //   document.getElementById("amazon-prime").textContent = "   Amazon Prime Video   "
+             document.getElementById("streaming-links").innerHTML +='<a href="https://www.amazon.com/Prime-Video/b?node=2676882011" target="_blank" id="amazon-link"><h4 id="amazon-prime">Amazon Prime Video</h4></a>'
+          } //else if (amazonPrime.length === 0) {
+        //     document.getElementById("amazon-prime").textContent = " ";  
+          //  }
 
           const hboMax = sources.filter(source => source.source_id === 387 )
           if (hboMax.length >= 1) {
-            document.getElementById("hbo-max").textContent = "   HBO Max   "
-          } else if (netflix.length === 0) {
-             document.getElementById("hbo-max").textContent = " ";  
-            }
+            document.getElementById("streaming-links").innerHTML +='<a href="https://www.hbomax.com/" target="_blank" id="hbo-max-link"><h4 id="hbo-max">HBO Max</h4></a>'
+     //       document.getElementById("hbo-max").textContent = "   HBO Max   "
+          } //else if (netflix.length === 0) {
+        //     document.getElementById("hbo-max").textContent = " ";  
+           // }
 
           console.log(disneyPlus);
          // if (disneyPlus.length === 0); 
