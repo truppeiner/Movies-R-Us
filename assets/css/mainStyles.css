@@ -1,48 +1,48 @@
-
-html, body {
-    background-color:  hsl(48, 100%, 96%);
-    height: 100%;
-    display: flexbox;
+html,
+body {
+  background-color: hsl(48, 100%, 96%);
+  height: 100%;
+  display: flexbox;
 }
 
 /*Header START*/
 /*Navigation bar START*/
-  .navbar {
-    width: 100%;
-      display: flex;
-      justify-content: center;
-  }
-  #my-navbar img {
-    display: block;
-  }
-  
-  #my-navbar a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  #my-navbar {
-    padding: 10px;
-  }
-  
-  #my-navbar .container,
-  #my-navbar .container>div {
-    display: flex;
-  }
-  
-  #my-navbar .container {
-    /* Set a max width to squeeze the navbar */
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  #my-navbar .container>div {
-    flex: 1;
-    align-items: center;
-    justify-content: space-around;
-  }
-  
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#my-navbar img {
+  display: block;
+}
+
+#my-navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+#my-navbar {
+  padding: 10px;
+}
+
+#my-navbar .container,
+#my-navbar .container > div {
+  display: flex;
+}
+
+#my-navbar .container {
+  /* Set a max width to squeeze the navbar */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#my-navbar .container > div {
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
+}
+
 /*Navigation bar END*/
 /*Header END*/
 /* Main style START */
@@ -62,20 +62,20 @@ html, body {
     margin: 0;
   }
   #my-navbar .container,
-  #my-navbar .container>div {
+  #my-navbar .container > div {
     flex-direction: column;
     align-items: flex-start;
   }
   #my-navbar .item {
     margin: 5px;
   }
-  #my-navbar .container>div:nth-child(1) {
+  #my-navbar .container > div:nth-child(1) {
     order: 2;
   }
-  #my-navbar .container>div:nth-child(2) {
+  #my-navbar .container > div:nth-child(2) {
     order: 1;
   }
-  #my-navbar .container>div:nth-child(3) {
+  #my-navbar .container > div:nth-child(3) {
     order: 3;
   }
 }

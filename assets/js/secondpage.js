@@ -49,7 +49,7 @@ var searchSelectedGenre = function (genre) {
   var watchModeGenreUrl =
     "https://api.watchmode.com/v1/list-titles?genres=" +
     genre +
-    "&limit=100&apiKey=WIu3mU2xnsXe9BTf7WlTqfAmFnw3uwR5kTG1RtbB";
+    "&limit=30&apiKey=3vWxYKPiq0kntxPSw8B2hMi3OiBvlMzGkqZPSj6R";
   fetch(watchModeGenreUrl)
     .then(function (response) {
       //request successful
@@ -88,11 +88,7 @@ var displayGenreResults = function (titles) {
     //console.log(titles.titles);
     //console.log(titles.titles[0].id);
 
-    var titleName = titles.titles[i].title;
-    var titleId = titles.titles[i].id;
-    var titleYear = titles.titles[i].year;
-    //console.log(titleName);
-
+    // loop through to dynamically create card for each title
     for (let i = 0; i < titles.titles.length; i++) {
       var dynaTitleCard = document.createElement("div");
       dynaTitleCard.setAttribute("id", "title-card");

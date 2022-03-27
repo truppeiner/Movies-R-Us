@@ -1,18 +1,22 @@
 # Movies-R-Us, Inc
 
 ## Purpose
+
 A website that offers a list of movie hits, depending on the genre you selected.
 
 ## Built With
-* HTML
-* CSS
-* Javascript
+
+- HTML
+- CSS
+- Javascript
 
 ## Website
+
 https://truppeiner.github.io/Movies-R-Us/
 
 ## Contribution
-Made with ❤️ by 
+
+Made with ❤️ by
 [Kevin Long]
 [Govnor Payne]
 [Thomas Ruppeiner]
@@ -26,3 +30,15 @@ Made with ❤️ by
 ![MoviesRus3](https://user-images.githubusercontent.com/97925568/160005653-348b76a9-530b-4533-a225-d8f83a84689d.png)
 
 ### ©️2022 Movies-R-Us, Inc
+
+## User Story
+
+```
+AS A subscriber to multiple movie and television streaming services
+
+I WANT to be able to browse trending available titles by genre across all of the major streaming services
+
+SO THAT I can select an available title to watch from any of the services without having to toggle back and forth among the various multiple apps of the different streaming services.
+AND SO THAT after selecting a title to watch I can link directly to the streaming service on which the title is available.
+
+```
