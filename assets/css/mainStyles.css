@@ -1,6 +1,6 @@
-
-html, body {
-  background-color:  hsl(48, 100%, 96%);
+html,
+body {
+  background-color: hsl(48, 100%, 96%);
   height: 100%;
   display: flexbox;
 }
@@ -9,8 +9,8 @@ html, body {
 /*Navigation bar START*/
 .navbar {
   width: 100%;
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 #my-navbar img {
   display: block;
@@ -26,7 +26,7 @@ html, body {
 }
 
 #my-navbar .container,
-#my-navbar .container>div {
+#my-navbar .container > div {
   display: flex;
 }
 
@@ -37,7 +37,7 @@ html, body {
   margin-right: auto;
 }
 
-#my-navbar .container>div {
+#my-navbar .container > div {
   flex: 1;
   align-items: center;
   justify-content: space-around;
@@ -47,35 +47,35 @@ html, body {
 /*Header END*/
 /* Main style START */
 .btn {
-display: inline-block;
-height: 200px;
-padding: 35 35;
-margin: 0;
-vertical-align: top;
-width: 200px;
-justify-content: space-between;
+  display: inline-block;
+  height: 200px;
+  padding: 35 35;
+  margin: 0;
+  vertical-align: top;
+  width: 200px;
+  justify-content: space-between;
 }
 
 /* Main style END */
 @media screen and (max-width: 768px) {
-#my-navbar .container {
-  margin: 0;
-}
-#my-navbar .container,
-#my-navbar .container>div {
-  flex-direction: column;
-  align-items: flex-start;
-}
-#my-navbar .item {
-  margin: 5px;
-}
-#my-navbar .container>div:nth-child(1) {
-  order: 2;
-}
-#my-navbar .container>div:nth-child(2) {
-  order: 1;
-}
-#my-navbar .container>div:nth-child(3) {
-  order: 3;
-}
+  #my-navbar .container {
+    margin: 0;
+  }
+  #my-navbar .container,
+  #my-navbar .container > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #my-navbar .item {
+    margin: 5px;
+  }
+  #my-navbar .container > div:nth-child(1) {
+    order: 2;
+  }
+  #my-navbar .container > div:nth-child(2) {
+    order: 1;
+  }
+  #my-navbar .container > div:nth-child(3) {
+    order: 3;
+  }
 }

@@ -1,44 +1,59 @@
-html, body {
-    height: 100%;
-    background-color: hsl(48, 100%, 96%);
+html,
+body {
+  height: 100%;
+  background-color: hsl(48, 100%, 96%);
 }
 
 body {
-    background-color: hsl(48, 100%, 96%);
+  background-color: hsl(48, 100%, 96%);
 }
 /* HERO SECTION STYLING */
-.hero{
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+.hero {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-.bottom-hero{
-    background-color: rgba(32, 156, 238, .5);
-    border-radius: 10px;
+.bottom-hero {
+  background-color: rgba(32, 156, 238, 0.5);
+  border-radius: 10px;
 }
 /* END HERO SECTION STYLING */
 
 .info-nest {
-    justify-content: center;
+  justify-content: center;
 }
 
-.where-watch, .info-nest {
-    margin-top: 30px;
-    padding: 10px; 
-    border-radius: 10px;
+.where-watch,
+.info-nest {
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-.watch-list{
-    text-decoration: none;
-    color: hsl(48, 100%, 67%);
+.watch-list {
+  text-decoration: none;
+  color: hsl(48, 100%, 67%);
 }
 
 footer {
+<<<<<<< HEAD
     background-color: hsl(48, 100%, 96%) !important;
 }
 #netflix, #hbo-max, #disney-plus, #hulu, #amazon-prime {
     margin:10px;
     color: hsl(48, 100%, 67%);
 }
+=======
+  background-color: hsl(48, 100%, 96%) !important;
+}
+#netflix,
+#hbo-max,
+#disney-plus,
+#hulu,
+#amazon-prime {
+  margin: 10px;
+  color: hsl(48, 100%, 67%);
+}
+>>>>>>> 98f066684b7e73976f0fecde56b1b13921d86835

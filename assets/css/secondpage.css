@@ -1,44 +1,50 @@
+html,
 body {
-    background-color: hsl(48, 100%, 96%);
+  height: 100%;
+  background-color: hsl(48, 100%, 96%);
+}
+
+body {
+  background-color: hsl(48, 100%, 96%);
 }
 /* HERO SECTION STYLING */
-.hero{
-    background-image: url(https://i.pinimg.com/originals/57/86/4f/57864fba6ddc7752526cb057e1801391.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+.hero {
+  background-image: url(https://i.pinimg.com/originals/57/86/4f/57864fba6ddc7752526cb057e1801391.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .hero .hero-body .genre-title p {
-    text-align: center;
-    text-size-adjust: 100px;
+  text-align: center;
+  text-size-adjust: 100px;
 }
 /* END HERO SECTION STYLING */
 
 /* Card Styling */
 #title-card {
-    background-color: grey;
-    border-style: double;
-    border-color: black;
-    margin-top: 4px;
-    justify-content: space-between;
+  background-color: grey;
+  border-style: double;
+  border-color: black;
+  margin-top: 4px;
+  justify-content: space-between;
 }
 
 #title-card h3 {
-    color: hsl(48, 100%, 67%);
+  color: hsl(48, 100%, 67%);
 }
 
 #title-card p {
-    color: hsl(48, 100%, 67%);
+  color: hsl(48, 100%, 67%);
 }
 
 .btn {
-    background-color: hsl(204, 85%, 50%);
-    color: white;
+  background-color: hsl(204, 85%, 50%);
+  color: white;
 }
 
-.btn:hover{
-    background-color: green;
-    color: white;
+.btn:hover {
+  background-color: green;
+  color: white;
 }
