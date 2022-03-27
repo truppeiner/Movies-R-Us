@@ -38,3 +38,7 @@ body {
 footer {
     background-color: hsl(48, 100%, 96%) !important;
 }
+#netflix, #hbo-max, #disney-plus, #hulu, #amazon-prime {
+    margin:10px;
+    color: hsl(48, 100%, 67%);
+}
