@@ -83,12 +83,8 @@ var searchSelectedGenre = function(genre) {
     for (var i = 0; i < titles.titles.length; i++) {
       //console.log(titles.titles);
       //console.log(titles.titles[0].id);
-   
-      var titleName = titles.titles[i].title; 
-      var titleId = titles.titles[i].id;
-      var titleYear = titles.titles[i].year;
-      //console.log(titleName);
       
+      // loop through to dynamically create card for each title
       for (let i = 0; i < titles.titles.length; i++) {
         var dynaTitleCard = document.createElement("div"); 
         dynaTitleCard.setAttribute("id", "title-card")
