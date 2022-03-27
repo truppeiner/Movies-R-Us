@@ -63,7 +63,9 @@ var displaySelectedTitle = function(genre) {
           const hulu = sources.filter(source => source.source_id === 157)
           if (hulu.length >= 1) {
           //  document.getElementById("hulu").textContent = "   Hulu   "
-          document.getElementById("streaming-links").innerHTML +='<a href="https://www.hulu.com/" target="_blank" id="hulu-link"><h4 id="hulu">Hulu</h4></a>'
+          let huluTitleUrl = hulu[0].web_url;
+          document.getElementById("streaming-links").innerHTML +='<a href=" " target="_blank" id="hulu-link"><h4 id="hulu">Hulu</h4></a>'
+          document.getElementById("hulu-link").setAttribute("href", huluTitleUrl);
           } //else if (hulu.length === 0) {
            //  document.getElementById("hulu").textContent = " ";  
          // }
@@ -71,14 +73,18 @@ var displaySelectedTitle = function(genre) {
           const amazonPrime = sources.filter(source => source.source_id === 26)
           if (amazonPrime.length >= 1) {
           //   document.getElementById("amazon-prime").textContent = "   Amazon Prime Video   "
-             document.getElementById("streaming-links").innerHTML +='<a href="https://www.amazon.com/Prime-Video/b?node=2676882011" target="_blank" id="amazon-link"><h4 id="amazon-prime">Amazon Prime Video</h4></a>'
+             let amazonPrimeTitleUrl = amazonPrime[0].web_url;
+             document.getElementById("streaming-links").innerHTML +='<a href=" " target="_blank" id="amazon-link"><h4 id="amazon-prime">Amazon Prime Video</h4></a>'
+             document.getElementById("amazon-link").setAttribute("href", amazonPrimeTitleUrl);
           } //else if (amazonPrime.length === 0) {
         //     document.getElementById("amazon-prime").textContent = " ";  
           //  }
 
           const hboMax = sources.filter(source => source.source_id === 387 )
           if (hboMax.length >= 1) {
-            document.getElementById("streaming-links").innerHTML +='<a href="https://www.hbomax.com/" target="_blank" id="hbo-max-link"><h4 id="hbo-max">HBO Max</h4></a>'
+            let hboTitleUrl = hboMax[0].web_url
+            document.getElementById("streaming-links").innerHTML +='<a href="" target="_blank" id="hbo-max-link"><h4 id="hbo-max">HBO Max</h4></a>'
+            document.getElementById("hbo-max-link").setAttribute("href", hboTitleUrl);
      //       document.getElementById("hbo-max").textContent = "   HBO Max   "
           } //else if (netflix.length === 0) {
         //     document.getElementById("hbo-max").textContent = " ";  
