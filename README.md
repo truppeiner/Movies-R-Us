@@ -20,10 +20,11 @@ Made with ❤️ by
 [Kevin Long]
 [Govnor Payne]
 [Thomas Ruppeiner]
-[Scott Obregon]
+[Scott Obregon]![Screenshot (122)]
+
 [Roy Velasquez]
 
-![MoviesRUs1](https://user-images.githubusercontent.com/97925568/160005448-641bfe21-1d2c-4f12-be21-b75006c0941b.png)
+![MoviesRUs1](https://user-images.githubusercontent.com/98487770/160310323-3c00152f-38f8-43a6-b9bb-c3e3575f850c.png)
 
 ![MoviesRus2](https://user-images.githubusercontent.com/97925568/160005584-58a768e7-8797-4cbb-abdc-effe872ee274.png)
 
