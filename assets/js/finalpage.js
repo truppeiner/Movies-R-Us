@@ -3,7 +3,7 @@ var displaySelectedTitle = function(genre) {
   var selectedTitleId = url.searchParams.get("featureTitleId") 
   console.log(selectedTitleId);
   // format the watchmode api url for selected title details
-  var selectedTitleApiUrl = 'https://api.watchmode.com/v1/title/' + selectedTitleId + '/details/?append_to_response=sources&apiKey=3vWxYKPiq0kntxPSw8B2hMi3OiBvlMzGkqZPSj6R';
+  var selectedTitleApiUrl = 'https://api.watchmode.com/v1/title/' + selectedTitleId + '/details/?append_to_response=sources&apiKey=SPq4jFg1pgbWR6mP6rZGPrBrNGisLbdUeu2P0TKp';
   fetch(selectedTitleApiUrl).then(function(response) {
     //request successful
     if (response.ok) {
@@ -120,7 +120,7 @@ var displaySelectedTitle = function(genre) {
           document.getElementById("trailer-link").setAttribute("target", "_blank");
 
        // call movie database for cast list
-          var castURL = "https://api.themoviedb.org/3/movie/" + featureImbdId + "/credits?api_key=921ba47b5c4b85bc48dd2db9202db1be&language=en-US"; 
+          var castURL = "https://api.themoviedb.org/3/movie/" + featureImbdId + "/credits?api_key=31febeb1a096ab76fc9eba623fc41de8&language=en-US"; 
           fetch(castURL).then(function (response) {
           if (response.ok) { 
             response.json().then(function (data) { 
