@@ -27,7 +27,8 @@ Made with ❤️ by
 
 ![MoviesRus2](https://user-images.githubusercontent.com/97925568/160005584-58a768e7-8797-4cbb-abdc-effe872ee274.png)
 
-![MoviesRus3]![image](https://user-images.githubusercontent.com/98487770/160310543-8a1aeb2a-6280-4b60-8c08-09d35a8f7781.png)
+![MoviesRus3](https://user-images.githubusercontent.com/98487770/160310597-cb00bcd3-1d28-43c9-801d-e941ce7c3b21.png)
+
 
 
 ### ©️2022 Movies-R-Us, Inc
